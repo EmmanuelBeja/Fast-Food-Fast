@@ -21,9 +21,7 @@ a{
 
 
 /***********************************
-************************************
 Buttons start
-************************************
 ***********************************/
 .btn-normal{
   border: 1px solid white;
@@ -34,8 +32,11 @@ Buttons start
   text-decoration: none;
 	width: auto;
 }
+.btn-wide{
+  width: 100%!important;
+}
 .btn-orange{
-  border: 1px solid #ff7800;
+  border: 1px solid #ffa50073;
   border-radius: 5px;
   background-color: orange;
   color: white;
@@ -44,10 +45,31 @@ Buttons start
 	width: auto;
 }
 .btn-darkblue{
-
+  border: 1px solid #00008b9c;
+  border-radius: 5px;
+  background-color: darkblue;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  width: auto;
 }
 .btn-lightblue{
-
+  border: 1px solid #add8e6a8;
+  border-radius: 5px;
+  background-color: lightblue;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  width: auto;
+}
+.btn-maroon{
+  border: 1px solid #8000007a;
+  border-radius: 5px;
+  background-color: maroon;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  width: auto;
 }
 .btn-small{
 	padding: 5px 10px!important;
@@ -55,15 +77,12 @@ Buttons start
 .btn-large{
 	padding: 8px 12px!important;
 }
-
 /***********************************
-************************************
 Button End
-************************************
 ***********************************/
 
 .container{
-	width:80%;
+	width:96%;
   margin:auto;
   overflow:hidden;
 }
@@ -95,9 +114,7 @@ Button End
 
 
 /***********************************
-************************************
 Navbar Start
-************************************
 ***********************************/
 .navbar-default {
     background-color: transparent;
@@ -121,7 +138,7 @@ Navbar Start
   display:grid;
   grid-template-columns: 50% 50%;
   grid-column-gap: 0em;
-  margin: auto 20px;
+  margin: auto 40px;
 }
 ul.nav-right {
   right:0;
@@ -152,19 +169,13 @@ ul.nav-right > li > a:focus, .navbar-default .nav-right > li > a:hover {
 .nav-top{
   top: 0;
 }
-
 /***********************************
-************************************
 Navbar End
-************************************
 ***********************************/
 
 
-
 /***********************************
-************************************
 Header Start
-************************************
 ***********************************/
 .header{
   position: relative;
@@ -199,32 +210,25 @@ Header Start
   margin: 20px auto;
 }
 /***********************************
-************************************
 Header End
-************************************
 ***********************************/
 
+
 /***********************************
-************************************
 Footer Start
-************************************
 ***********************************/
 .footer{
 	display: block;
   margin: auto auto auto 20px;
 	padding: 20px;
 }
-
 /***********************************
-************************************
 Footer End
-************************************
 ***********************************/
 
+
 /***********************************
-************************************
 Grid System Start
-************************************
 ***********************************/
 .box-row{
  display: flex;
@@ -262,9 +266,144 @@ Grid System Start
 	display: table;
 	width: 100%;
 }
+/***********************************
+Grid System End
+***********************************/
+
 
 /***********************************
-************************************
-Grid System End
-************************************
+Responsive media queries Start
+***********************************/
+@media (min-width: 551px) and (max-width: 980px){
+	.box-row{
+	 display: block;
+	 padding: 2px;
+	}
+	.border-left-orange {
+    border-left: 4px solid orange;
+    padding: 10px;
+  }
+	.box-col-1 {
+		display: table;
+		width: 50%;
+	}
+	.box-col-2 {
+		display: table;
+		width: 50%;
+	}
+	.box-col-3 {
+		display: table;
+		width: 100%;
+	}
+	.box-col-4 {
+		display: table;
+		width: 100%;
+	}
+	.box-col-5 {
+		display: table;
+		width: 100%;
+	}
+	.box-col-6 {
+		display: table;
+		width: 100%;
+	}
+	.box-col-7 {
+		display: table;
+		width: 100%;
+	}
+	.box-col-8 {
+		display: table;
+		width: 100%;
+	}
+
+  .navbar-brand{
+    display: none;
+  }
+  .navbar-brand-responsive{
+    display: contents;
+  }
+  .nav-container{
+    display:block;
+    margin: 10px auto;
+  }
+  ul.nav-right {
+    list-style-type: none;
+    margin: auto 10px;
+    padding: 0px auto;
+    overflow: hidden;
+  }
+  ul.nav-right li {
+    float: none;
+    text-align: center;
+    margin: 5px auto;
+  }
+}
+
+@media (min-width: 100px) and (max-width: 550px) {
+	.box-row{
+	 display: block;
+	 padding: 2px;
+	}
+	.border-left-orange {
+    border-left: 4px solid orange;
+    padding: 10px;
+  }
+	.box-col-1 {
+		display: table;
+		width: 50%;
+	}
+	.box-col-2 {
+		display: table;
+		width: 50%;
+	}
+	.box-col-3 {
+		display: table;
+		width: 100%;
+	}
+	.box-col-4 {
+		display: table;
+		width: 100%;
+	}
+	.box-col-5 {
+		display: table;
+		width: 100%;
+	}
+	.box-col-6 {
+		display: table;
+		width: 100%;
+	}
+	.box-col-7 {
+		display: table;
+		width: 100%;
+	}
+	.box-col-8 {
+		display: table;
+		width: 100%;
+	}
+
+  .navbar-brand{
+    display: none;
+  }
+  .navbar-brand-responsive{
+    display: contents;
+  }
+  .nav-container{
+    display:block;
+    margin: 10px auto;
+  }
+  ul.nav-right {
+    list-style-type: none;
+    margin: auto 10px;
+    padding: 0px auto;
+    overflow: hidden;
+  }
+  ul.nav-right li {
+    float: none;
+    text-align: center;
+    margin: 5px auto;
+  }
+}
+
+/***********************************
+Responsive Media Queries end
 ***********************************/
