@@ -131,8 +131,8 @@ Navbar Start
   display: none;
 }
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-    color: orange;
-    outline: none;
+  color: orange;
+  outline: none;
 }
 .nav-container{
   display:grid;
@@ -149,7 +149,7 @@ ul.nav-right {
 }
 ul.nav-right li {
   float: right;
-  margin: auto 5px;
+  margin: 10px 5px;
 }
 ul.nav-right > li > a{
 	display: block;
@@ -189,12 +189,10 @@ Header Start
   min-height: 570px;
   width: 100%;
 }
-.header-caption{
-  margin: auto 20px;
-}
 .border-left-orange{
   border-left: 4px solid orange;
   padding: 20px;
+  margin-left: 20px;
 }
 .header-caption-head{
   font-size: 30px;
@@ -226,44 +224,62 @@ Footer End
 ***********************************/
 
 
-/***********************************
+**********************************
 Grid System Start
 ***********************************/
 .box-row{
- display: flex;
+ display: table;
  padding: 2px;
+ position: relative;
 }
 .box-col-1 {
-	display: table;
+	display: table-column;
 	width: 12.5%;
+  float: left;
+  position: inherit;
 }
 .box-col-2 {
-	display: table;
+	display: table-column;
 	width: 25%;
+  float: left;
+  position:inherit;
 }
 .box-col-3 {
-	display: table;
+	display: table-column;
 	width: 37.5%;
+  float: left;
+  position: inherit;
 }
 .box-col-4 {
-	display: table;
+	display: table-column;
 	width: 50%;
+  float: left;
+  position:inherit;
 }
 .box-col-5 {
-	display: table;
+	display: table-column;
 	width: 62.5%;
+  float: left;
+  position: inherit;
 }
 .box-col-6 {
-	display: table;
+	display: table-column;
 	width: 75%;
+  float: left;
+  position:inherit;
 }
 .box-col-7 {
-	display: table;
+	display: table-column;
 	width: 87.5%;
+  float: left;
+  position: inherit;
 }
 .box-col-8 {
-	display: table;
+
+	display: table-column;
 	width: 100%;
+  float: left;
+  position: inherit;
 }
 /***********************************
 Grid System End
@@ -275,7 +291,7 @@ Responsive media queries Start
 ***********************************/
 @media (min-width: 551px) and (max-width: 980px){
 	.box-row{
-	 display: block;
+	 display: table;
 	 padding: 2px;
 	}
 	.border-left-orange {
@@ -283,35 +299,35 @@ Responsive media queries Start
     padding: 10px;
   }
 	.box-col-1 {
-		display: table;
+		display: table-column;
 		width: 50%;
 	}
 	.box-col-2 {
-		display: table;
+		display: table-column;
 		width: 50%;
 	}
 	.box-col-3 {
-		display: table;
+		display: table-column;
 		width: 100%;
 	}
 	.box-col-4 {
-		display: table;
+		display: table-column;
 		width: 100%;
 	}
 	.box-col-5 {
-		display: table;
+		display: table-column;
 		width: 100%;
 	}
 	.box-col-6 {
-		display: table;
+		display: table-column;
 		width: 100%;
 	}
 	.box-col-7 {
-		display: table;
+		display: table-column;
 		width: 100%;
 	}
 	.box-col-8 {
-		display: table;
+		display: table-column;
 		width: 100%;
 	}
 
@@ -340,7 +356,7 @@ Responsive media queries Start
 
 @media (min-width: 100px) and (max-width: 550px) {
 	.box-row{
-	 display: block;
+	 display: table;
 	 padding: 2px;
 	}
 	.border-left-orange {
@@ -348,35 +364,35 @@ Responsive media queries Start
     padding: 10px;
   }
 	.box-col-1 {
-		display: table;
+		display: table-column;
 		width: 50%;
 	}
 	.box-col-2 {
-		display: table;
+		display: table-column;
 		width: 50%;
 	}
 	.box-col-3 {
-		display: table;
+		display: table-column;
 		width: 100%;
 	}
 	.box-col-4 {
-		display: table;
+		display: table-column;
 		width: 100%;
 	}
 	.box-col-5 {
-		display: table;
+		display: table-column;
 		width: 100%;
 	}
 	.box-col-6 {
-		display: table;
+		display: table-column;
 		width: 100%;
 	}
 	.box-col-7 {
-		display: table;
+		display: table-column;
 		width: 100%;
 	}
 	.box-col-8 {
-		display: table;
+		display: table-column;
 		width: 100%;
 	}
 
