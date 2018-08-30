@@ -1,5 +1,72 @@
 /***********************************
 ************************************
+Navbar Start
+************************************
+***********************************/
+.navbar-default {
+    background-color: transparent;
+	  border: 0px;
+    padding: 5px 0;
+    transition: all 0.3s;
+}
+.navbar-brand {
+	  color: white;
+    font-size: 36px;
+    font-family: "Times New Roman", Times, serif;
+}
+.navbar-brand-responsive{
+  display: none;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    color: orange;
+    outline: none;
+}
+.nav-container{
+  display:grid;
+  grid-template-columns: 50% 50%;
+  grid-column-gap: 0em;
+  margin: auto 20px;
+}
+ul.nav-right {
+  right:0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+ul.nav-right li {
+  float: right;
+  margin: auto 5px;
+}
+ul.nav-right > li > a{
+	display: block;
+	font-weight: 400;
+	color: #fff;
+  outline: none;
+  padding: 0px 5px;
+}
+ul.nav-right > li > a:focus, .navbar-default .nav-right > li > a:hover {
+  color: orange;
+  background-color: transparent;
+}
+.navbar-default .nav-right > .active > a, .navbar-default .nav-right > .active > a:focus, .navbar-default .nav-right > .active > a:hover {
+  color: #fffde0;
+  background-color: transparent;
+}
+.nav-top{
+  top: 0;
+}
+
+/***********************************
+************************************
+Navbar End
+************************************
+***********************************/
+
+
+
+/***********************************
+************************************
 Header Start
 ************************************
 ***********************************/
