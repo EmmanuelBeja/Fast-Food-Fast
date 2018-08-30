@@ -220,3 +220,51 @@ Footer Start
 Footer End
 ************************************
 ***********************************/
+
+/***********************************
+************************************
+Grid System Start
+************************************
+***********************************/
+.box-row{
+ display: flex;
+ padding: 2px;
+}
+.box-col-1 {
+	display: table;
+	width: 12.5%;
+}
+.box-col-2 {
+	display: table;
+	width: 25%;
+}
+.box-col-3 {
+	display: table;
+	width: 37.5%;
+}
+.box-col-4 {
+	display: table;
+	width: 50%;
+}
+.box-col-5 {
+	display: table;
+	width: 62.5%;
+}
+.box-col-6 {
+	display: table;
+	width: 75%;
+}
+.box-col-7 {
+	display: table;
+	width: 87.5%;
+}
+.box-col-8 {
+	display: table;
+	width: 100%;
+}
+
+/***********************************
+************************************
+Grid System End
+************************************
+***********************************/
