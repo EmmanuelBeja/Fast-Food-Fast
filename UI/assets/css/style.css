@@ -1,3 +1,76 @@
+body{
+  background-color: #eaeaea;
+  margin: 0px;
+  line-height: 1.4;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+	color: #333;
+}
+
+section{
+	margin: 40px auto;
+}
+
+
+a{
+  text-decoration: none;
+  color: teal;
+}
+
+
+/***********************************
+************************************
+Buttons start
+************************************
+***********************************/
+.btn-normal{
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #333;
+  text-align: center;
+  text-decoration: none;
+	width: auto;
+}
+.btn-orange{
+  border: 1px solid #ff7800;
+  border-radius: 5px;
+  background-color: orange;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+	width: auto;
+}
+.btn-darkblue{
+
+}
+.btn-lightblue{
+
+}
+.btn-small{
+	padding: 5px 10px!important;
+}
+.btn-large{
+	padding: 8px 12px!important;
+}
+
+/***********************************
+************************************
+Button End
+************************************
+***********************************/
+
+.container{
+	width:80%;
+  margin:auto;
+  overflow:hidden;
+}
+
+
+
+
 /***********************************
 ************************************
 Navbar Start
