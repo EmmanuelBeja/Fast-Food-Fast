@@ -67,7 +67,30 @@ Button End
   margin:auto;
   overflow:hidden;
 }
+.input{
+  display: block;
+  width: 100%;
+  height: 20px;
+  padding: 7px 13px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 1px solid #abaaaa;
+}
+.panel{
+  border: 1px solid whitesmoke;
+  background-color: white;
+	height: 100%;
+	margin:20px;
+	padding: 20px;
+	border-radius: 4px;
+}
+.form{
+  margin:0 20px 0 0;
+}
 
+.form h4{
+  margin:5px auto;
+}
 
 
 
@@ -154,6 +177,26 @@ Header Start
   background-color: RGBA(0, 0, 0, 0.67);
   min-height: 570px;
   width: 100%;
+}
+.header-caption{
+  margin: auto 20px;
+}
+.border-left-orange{
+  border-left: 4px solid orange;
+  padding: 20px;
+}
+.header-caption-head{
+  font-size: 30px;
+  padding: 0px 20px;
+  padding-top: 0px;
+  margin-top: 20px;
+  color: #eaeaea;
+}
+.header-caption-description{
+  font-size: 20px;
+  padding: 0px 20px;
+  color: #eaeaea;
+  margin: 20px auto;
 }
 /***********************************
 ************************************
