@@ -9,7 +9,7 @@ install:
   - git checkout  160341465-allorders
   - pip3 install -r API/requirements.txt
   - cd API
-  - py.test tests.py
+  - py.test tests/tests.py
   - cd -
 
 script:
