@@ -1,0 +1,19 @@
+language: python
+
+python:
+  - "3.6"
+
+install:
+  - git clone https://github.com/EmmanuelBeja/Fast-Food-Fast.git
+  - cd Fast-Food-Fast
+  - git checkout  160341465-allorders
+  - pip3 install -r API/requirements.txt
+  - cd API
+  - py.test tests.py
+  - cd -
+
+script:
+  - py.test --cov=API/ --doctest-modules --pep8 coveralls -v --cov coveralls --cov-report term-missing
+
+after_success:
+  - coveralls
