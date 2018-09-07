@@ -7,13 +7,12 @@ install:
   - git clone https://github.com/EmmanuelBeja/Fast-Food-Fast.git
   - cd Fast-Food-Fast
   - git checkout  160341465-allorders
-  - pip3 install -r API/requirements.txt
-  - cd API/tests/
+  - pip3 install -r requirements.txt
   - py.test tests.py
   - cd -
 
 script:
-  - py.test --cov=API/tests/
+  - py.test --cov=./tests.py
 
 after_success:
   - coveralls
