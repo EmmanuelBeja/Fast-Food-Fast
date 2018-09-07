@@ -8,11 +8,11 @@ install:
   - cd Fast-Food-Fast
   - git checkout  160341465-allorders
   - pip3 install -r requirements.txt
-  - py.test tests.py
+  - pytest tests.py
   - cd -
 
 script:
-  - py.test
+  - pytest
 
 after_success:
   - coveralls
