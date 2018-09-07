@@ -12,7 +12,7 @@ install:
   - cd -
 
 script:
-  - py.test --cov=./tests.py
+  - py.test --cov=./tests.py --doctest-modules --pep8 coveralls -v --cov coveralls --cov-report term-missing
 
 after_success:
   - coveralls
