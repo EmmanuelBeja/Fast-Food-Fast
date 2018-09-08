@@ -3,7 +3,7 @@ tests.py
 """
 import unittest
 
-import context
+import tests
 
 from app import create_app
 
