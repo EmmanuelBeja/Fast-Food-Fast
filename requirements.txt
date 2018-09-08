@@ -2,12 +2,17 @@ alembic==1.0.0
 apipkg==1.5
 atomicwrites==1.2.1
 attrs==18.2.0
+certifi==2018.8.24
+chardet==3.0.4
 click==6.7
 cov-core==1.15.0
 coverage==4.5.1
+coveralls==1.5.0
+docopt==0.6.2
 execnet==1.5.0
 Flask==1.0.2
 Flask-API==1.0
+idna==2.7
 itsdangerous==0.24
 Jinja2==2.10
 Mako==1.0.7
@@ -24,5 +29,8 @@ pytest-pep8==1.0.6
 python-dateutil==2.7.3
 python-dotenv==0.9.1
 python-editor==1.0.3
+requests==2.19.1
 six==1.11.0
+SQLAlchemy==1.2.11
+urllib3==1.23
 Werkzeug==0.14.1
