@@ -5,9 +5,9 @@ import os
 
 class Config(object):
     """Parent configuration class."""
-    DEBUG = False
+    DEBUG = True
     CSRF_ENABLED = True
-    SECRET = os.getenv('SECRET')
+    SECRET = os.getenv('\xfd{H\xe5<\x95\xf9\xe3\x96.5\xd1\x01O<!\xd5\xa2\xa0\x9fR"\xa1\xa8')
 
 
 class DevelopmentConfig(Config):

@@ -3,8 +3,6 @@ tests.py
 """
 import unittest
 
-import tests
-
 from app import create_app
 
 class OrderTestCase(unittest.TestCase):
@@ -12,7 +10,7 @@ class OrderTestCase(unittest.TestCase):
 
     def setUp(self):
         """Define test variables and initialize app."""
-        self.app = create_app(CONFIGNAME="testing")
+        self.app = create_app(config_name="testing")
         self.client = self.app.test_client
         self.order = {
             "id": 1,
