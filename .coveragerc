@@ -3,5 +3,3 @@ omit =
     */tests*
 
 [report]
-
-def parse_args
