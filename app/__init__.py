@@ -12,19 +12,20 @@ def create_app(config_name):
     app = FlaskAPI(__name__, instance_relative_config=True)
     app.config.from_object(app_config[config_name])
 
-    @app.route('/v1/orders/', methods=['GET'])
+    @app.route('/v1/orders', methods=['POST'])
     def orders():
-        # GET
-        orders = Order.get_all()
-        results = []
+        #POST
+        order_id = request.args.get('order_id')
+        food_name = str(request.args.get('food_name'))
+        food_price = str(request.args.get('food_price'))
+        client_name = str(request.args.get('client_name'))
+        client_adress = str(request.args.get('client_adress'))
 
-        for index in range(len(orders)):
-            for key in orders[index]:
-                print(orders[index][key])
-                obj = orders[index][key]
-                results.append(obj)
-        response = jsonify(results)
-        response.status_code = 200
-        return response
+        if order_id:
+            order = Order(order_id=order_id, food_name=food_name, food_price=food_price, client_name=client_name, client_adress=client_adress)
+            result = order.save()
+            response = jsonify(result)
+            response.status_code = 201
+            return response
 
     return app
