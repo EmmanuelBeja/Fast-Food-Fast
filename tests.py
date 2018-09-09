@@ -5,6 +5,7 @@ import unittest
 
 from app import create_app
 
+
 class OrderTestCase(unittest.TestCase):
     """This class represents the order test case"""
 
