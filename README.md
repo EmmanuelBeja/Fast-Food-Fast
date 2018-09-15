@@ -12,7 +12,9 @@ A food delivery service app for a restaurant.
 
 ## Routes
 
- - /v1/orders/<int:order_id>
+ - GET /v1/orders/<int:order_id>
+ - UPDATE /v1/orders/<int:order_id>
+ - DELETE /v1/orders/<int:order_id>
 
 ## Author
 
