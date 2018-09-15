@@ -16,7 +16,6 @@ This branch holds code to get all order
 
 * **Emmanuel Beja**
 
-
 ## License
 
 This project is licensed under the MIT License
