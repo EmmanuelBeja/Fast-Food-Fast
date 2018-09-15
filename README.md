@@ -1,6 +1,6 @@
 # Fast-Food-Fast
 
-[![Build Status](https://travis-ci.org/EmmanuelBeja/Fast-Food-Fast.svg?branch=160341465-allorders)](https://travis-ci.org/EmmanuelBeja/Fast-Food-Fast)
+[![Build Status](https://travis-ci.org/EmmanuelBeja/Fast-Food-Fast.svg?branch=ft-manipulateorder-160341506)](https://travis-ci.org/EmmanuelBeja/Fast-Food-Fast)
 
 [![Coverage Status](https://coveralls.io/repos/github/EmmanuelBeja/Fast-Food-Fast/badge.svg?branch=ft-manipulateorder-160341506)](https://coveralls.io/github/EmmanuelBeja/Fast-Food-Fast?branch=ft-manipulateorder-160341506)
 
