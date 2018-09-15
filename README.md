@@ -1,3 +1,4 @@
+# Fast-Food-Fast
 [![Build Status](https://travis-ci.org/EmmanuelBeja/Fast-Food-Fast.svg?branch=ft-allorders-160341465)](https://travis-ci.org/EmmanuelBeja/Fast-Food-Fast) [![Coverage Status](https://coveralls.io/repos/github/EmmanuelBeja/Fast-Food-Fast/badge.svg?branch=ft-allorders-160341465)](https://coveralls.io/github/EmmanuelBeja/Fast-Food-Fast?branch=ft-allorders-160341465)
 
 A food delivery service app for a restaurant.
