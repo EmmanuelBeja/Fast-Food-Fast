@@ -10,7 +10,7 @@ A food delivery service app for a restaurant.
  - Delete specific order by its order_id.
 
 
-## Route
+## Routes
 
  - /v1/orders/<int:order_id>
 
