@@ -1,0 +1,424 @@
+body{
+  background-color: #eaeaea;
+  margin: 0px;
+  line-height: 1.4;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+	color: #333;
+}
+
+section{
+	margin: 40px auto;
+}
+
+
+a{
+  text-decoration: none;
+  color: teal;
+}
+
+
+/***********************************
+Buttons start
+***********************************/
+.btn-normal{
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #333;
+  text-align: center;
+  text-decoration: none;
+	width: auto;
+}
+.btn-wide{
+  width: 100%!important;
+}
+.btn-orange{
+  border: 1px solid #ffa50073;
+  border-radius: 5px;
+  background-color: orange;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+	width: auto;
+}
+.btn-darkblue{
+  border: 1px solid #00008b9c;
+  border-radius: 5px;
+  background-color: darkblue;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  width: auto;
+}
+.btn-lightblue{
+  border: 1px solid #add8e6a8;
+  border-radius: 5px;
+  background-color: lightblue;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  width: auto;
+}
+.btn-maroon{
+  border: 1px solid #8000007a;
+  border-radius: 5px;
+  background-color: maroon;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  width: auto;
+}
+.btn-small{
+	padding: 5px 10px!important;
+}
+.btn-large{
+	padding: 8px 12px!important;
+}
+/***********************************
+Button End
+***********************************/
+
+.container{
+	width:96%;
+  margin:20px auto;
+  overflow:hidden;
+}
+.input{
+  display: block;
+  width: 100%;
+  height: 20px;
+  padding: 7px 13px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 1px solid #abaaaa;
+}
+.panel{
+  border: 1px solid whitesmoke;
+  background-color: white;
+	height: 100%;
+	margin:20px;
+	padding: 20px;
+	border-radius: 4px;
+}
+.form{
+  margin:0 20px 0 0;
+}
+
+.form h4{
+  margin:5px auto;
+}
+
+
+
+/***********************************
+Navbar Start
+***********************************/
+.navbar-default {
+    background-color: transparent;
+	  border: 0px;
+    padding: 5px 0;
+    transition: all 0.3s;
+}
+.navbar-brand {
+	  color: white;
+    font-size: 36px;
+    font-family: "Times New Roman", Times, serif;
+}
+.navbar-brand-responsive{
+  display: none;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: orange;
+  outline: none;
+}
+.nav-container{
+  display:grid;
+  grid-template-columns: 50% 50%;
+  grid-column-gap: 0em;
+  margin: auto 40px;
+}
+ul.nav-right {
+  right:0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+ul.nav-right li {
+  float: right;
+  margin: 10px 5px;
+}
+ul.nav-right > li > a{
+	display: block;
+	font-weight: 400;
+	color: #fff;
+  outline: none;
+  padding: 0px 5px;
+}
+ul.nav-right > li > a:focus, .navbar-default .nav-right > li > a:hover {
+  color: orange;
+  background-color: transparent;
+}
+.navbar-default .nav-right > .active > a, .navbar-default .nav-right > .active > a:focus, .navbar-default .nav-right > .active > a:hover {
+  color: #fffde0;
+  background-color: transparent;
+}
+.nav-top{
+  top: 0;
+}
+/***********************************
+Navbar End
+***********************************/
+
+
+/***********************************
+Header Start
+***********************************/
+.header{
+  position: relative;
+  min-height: 570px;
+  width: 100%;
+  background: url(../img/header.jpg) no-repeat fixed;
+  background-size: cover;
+}
+.bg-color{
+  background-color: RGBA(0, 0, 0, 0.67);
+  min-height: 570px;
+  width: 100%;
+}
+.border-left-orange{
+  border-left: 4px solid orange;
+  padding: 20px;
+  margin-left: 20px;
+}
+.header-caption-head{
+  font-size: 30px;
+  padding: 0px 20px;
+  padding-top: 0px;
+  margin-top: 20px;
+  color: #eaeaea;
+}
+.header-caption-description{
+  font-size: 20px;
+  padding: 0px 20px;
+  color: #eaeaea;
+  margin: 20px auto;
+}
+/***********************************
+Header End
+***********************************/
+
+
+/***********************************
+Footer Start
+***********************************/
+.footer{
+	display: block;
+	padding: 40px;
+}
+/***********************************
+Footer End
+***********************************/
+
+
+/**********************************
+Grid System Start
+***********************************/
+.box-row{
+ display: table;
+ padding: 2px;
+ position: relative;
+}
+.box-col-1 {
+	display: table-column;
+	width: 12.5%;
+  float: left;
+  position: inherit;
+}
+.box-col-2 {
+	display: table-column;
+	width: 25%;
+  float: left;
+  position:inherit;
+}
+.box-col-3 {
+	display: table-column;
+	width: 37.5%;
+  float: left;
+  position: inherit;
+}
+.box-col-4 {
+	display: table-column;
+	width: 50%;
+  float: left;
+  position:inherit;
+}
+.box-col-5 {
+	display: table-column;
+	width: 62.5%;
+  float: left;
+  position: inherit;
+}
+.box-col-6 {
+	display: table-column;
+	width: 75%;
+  float: left;
+  position:inherit;
+}
+.box-col-7 {
+	display: table-column;
+	width: 87.5%;
+  float: left;
+  position: inherit;
+}
+.box-col-8 {
+
+	display: table-column;
+	width: 100%;
+  float: left;
+  position: inherit;
+}
+/***********************************
+Grid System End
+***********************************/
+
+
+/***********************************
+Responsive media queries Start
+***********************************/
+@media (min-width: 551px) and (max-width: 980px){
+	.box-row{
+	 display: table;
+	 padding: 2px;
+	}
+	.border-left-orange {
+    border-left: 4px solid orange;
+    padding: 10px;
+  }
+	.box-col-1 {
+		display: table-column;
+		width: 50%;
+	}
+	.box-col-2 {
+		display: table-column;
+		width: 50%;
+	}
+	.box-col-3 {
+		display: table-column;
+		width: 100%;
+	}
+	.box-col-4 {
+		display: table-column;
+		width: 100%;
+	}
+	.box-col-5 {
+		display: table-column;
+		width: 100%;
+	}
+	.box-col-6 {
+		display: table-column;
+		width: 100%;
+	}
+	.box-col-7 {
+		display: table-column;
+		width: 100%;
+	}
+	.box-col-8 {
+		display: table-column;
+		width: 100%;
+	}
+
+  .navbar-brand{
+    display: none;
+  }
+  .navbar-brand-responsive{
+    display: contents;
+  }
+  .nav-container{
+    display:block;
+    margin: 10px auto;
+  }
+  ul.nav-right {
+    list-style-type: none;
+    margin: auto 10px;
+    padding: 0px auto;
+    overflow: hidden;
+  }
+  ul.nav-right li {
+    float: none;
+    text-align: center;
+    margin: 5px auto;
+  }
+}
+
+@media (min-width: 100px) and (max-width: 550px) {
+	.box-row{
+	 display: table;
+	 padding: 2px;
+	}
+	.border-left-orange {
+    border-left: 4px solid orange;
+    padding: 10px;
+  }
+	.box-col-1 {
+		display: table-column;
+		width: 50%;
+	}
+	.box-col-2 {
+		display: table-column;
+		width: 50%;
+	}
+	.box-col-3 {
+		display: table-column;
+		width: 100%;
+	}
+	.box-col-4 {
+		display: table-column;
+		width: 100%;
+	}
+	.box-col-5 {
+		display: table-column;
+		width: 100%;
+	}
+	.box-col-6 {
+		display: table-column;
+		width: 100%;
+	}
+	.box-col-7 {
+		display: table-column;
+		width: 100%;
+	}
+	.box-col-8 {
+		display: table-column;
+		width: 100%;
+	}
+
+  .navbar-brand{
+    display: none;
+  }
+  .navbar-brand-responsive{
+    display: contents;
+  }
+  .nav-container{
+    display:block;
+    margin: 10px auto;
+  }
+  ul.nav-right {
+    list-style-type: none;
+    margin: auto 10px;
+    padding: 0px auto;
+    overflow: hidden;
+  }
+  ul.nav-right li {
+    float: none;
+    text-align: center;
+    margin: 5px auto;
+  }
+}
+
+/***********************************
+Responsive Media Queries end
+***********************************/
