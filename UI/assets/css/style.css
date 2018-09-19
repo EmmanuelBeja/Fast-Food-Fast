@@ -12,6 +12,9 @@ body{
 section{
 	margin: 40px auto;
   height: 480px;
+<<<<<<< HEAD
+=======
+>>>>>>> develop
 >>>>>>> develop
 }
 
@@ -24,6 +27,51 @@ a{
 img{
   width:100%
 }
+<<<<<<< HEAD
+
+.modal {
+display: block;
+width: 600px;
+max-width: 100%;
+height: 400px;
+max-height: 100%;
+position: fixed;
+z-index: 100;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+background: white;
+box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9);
+border-radius: 4px;
+}
+.closed {
+display: none;
+}
+
+.modal-overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 50;
+background: rgba(0, 0, 0, 0.6);
+}
+.modal-content {
+position: absolute;
+top: 0;
+left: 0;
+width: 90%;
+height: 100%;
+overflow: auto;
+padding: 20px 50px 20px 20px;
+}
+
+.modal h1{
+margin: 5px auto;
+}
+=======
+>>>>>>> develop
 >>>>>>> develop
 
 /***********************************
@@ -131,6 +179,9 @@ Navbar Start
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> develop
 >>>>>>> develop
 
 .navbar-white {
@@ -143,7 +194,10 @@ Navbar Start
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> develop
 >>>>>>> develop
 >>>>>>> develop
 .navbar-brand {
@@ -157,6 +211,9 @@ Navbar Start
   font-size: 36px;
   font-family: "Times New Roman", Times, serif;
 }
+<<<<<<< HEAD
+=======
+>>>>>>> develop
 >>>>>>> develop
 .navbar-brand-responsive{
   display: none;
@@ -168,6 +225,9 @@ Navbar Start
 .navbar-white .navbar-brand:hover, .navbar-white .navbar-brand:focus {
     color: teal;
     outline: none;
+<<<<<<< HEAD
+=======
+>>>>>>> develop
 >>>>>>> develop
 }
 .nav-container{
@@ -201,6 +261,9 @@ ul.nav-right > li > a{
   outline: none;
   padding: 0px 5px;
 }
+<<<<<<< HEAD
+=======
+>>>>>>> develop
 >>>>>>> develop
 ul.nav-right > li > a:focus, .navbar-default .nav-right > li > a:hover {
   color: orange;
@@ -210,6 +273,9 @@ ul.nav-right > li > a:focus, .navbar-white .nav-right > li > a:hover {
   color: teal;
   background-color: transparent;
 }
+<<<<<<< HEAD
+=======
+>>>>>>> develop
 >>>>>>> develop
 .navbar-default .nav-right > .active > a, .navbar-default .nav-right > .active > a:focus, .navbar-default .nav-right > .active > a:hover {
   color: #fffde0;
@@ -219,6 +285,9 @@ ul.nav-right > li > a:focus, .navbar-white .nav-right > li > a:hover {
   color: teal;
   background-color: transparent;
 }
+<<<<<<< HEAD
+=======
+>>>>>>> develop
 >>>>>>> develop
 .nav-top{
   top: 0;
@@ -227,6 +296,9 @@ ul.nav-right > li > a:focus, .navbar-white .nav-right > li > a:hover {
 Navbar End
 ***********************************/
 
+<<<<<<< HEAD
+=======
+>>>>>>> develop
 >>>>>>> develop
 /***********************************
 Header Start
@@ -275,6 +347,9 @@ Footer Start
   bottom: 0;
   background-color: white;
   border-bottom: 4px solid teal;
+<<<<<<< HEAD
+=======
+>>>>>>> develop
 >>>>>>> develop
 }
 /***********************************
@@ -282,6 +357,9 @@ Footer End
 ***********************************/
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> develop
 .bottom-shadow {
   -webkit-box-shadow: 0 3px 3px -3px black;
   -moz-box-shadow: 0 3px 3px -3px black;
@@ -350,7 +428,29 @@ Footer End
 .order-description{
   text-align:right;
 }
+<<<<<<< HEAD
+
+.panel h4{
+  margin:5px auto;
+}
+
+.hello-message{
+  margin: 20px;
+}
+.location-icon{
+  height: 20px;
+  width: 20px;
+  margin: auto auto -5px auto;
+}
+
+.btn-add-food{
+  margin: -40px 5px 0px auto;
+  display: table;
+}
 /**********************************
+=======
+/**********************************
+>>>>>>> develop
 >>>>>>> develop
 >>>>>>> develop
 Grid System Start
@@ -482,7 +582,11 @@ Responsive media queries Start
   }
 
   .list-item {
+<<<<<<< HEAD
+    display: inline-table;
+=======
     display: flex;
+>>>>>>> develop
     min-height: 50px;
     border-bottom: 1px solid whitesmoke;
     margin-bottom: 2px;
@@ -555,7 +659,11 @@ Responsive media queries Start
   }
 
   .list-item {
+<<<<<<< HEAD
+    display: inline-table;
+=======
     display: flex;
+>>>>>>> develop
     min-height: 50px;
     border-bottom: 1px solid whitesmoke;
     margin-bottom: 2px;
