@@ -11,7 +11,10 @@ body{
 
 section{
 	margin: 40px auto;
+<<<<<<< HEAD
   height: 480px;
+=======
+>>>>>>> develop
 }
 
 
@@ -20,9 +23,12 @@ a{
   color: teal;
 }
 
+<<<<<<< HEAD
 img{
   width:100%
 }
+=======
+>>>>>>> develop
 
 /***********************************
 Buttons start
@@ -126,6 +132,7 @@ Navbar Start
     padding: 5px 0;
     transition: all 0.3s;
 }
+<<<<<<< HEAD
 
 .navbar-white {
     background-color: white;
@@ -135,27 +142,37 @@ Navbar Start
     border-bottom: 1px solid whitesmoke;
 }
 
+=======
+>>>>>>> develop
 .navbar-brand {
 	  color: white;
     font-size: 36px;
     font-family: "Times New Roman", Times, serif;
 }
+<<<<<<< HEAD
 
 .navbar-white .navbar-brand{
   color: #333;
   font-size: 36px;
   font-family: "Times New Roman", Times, serif;
 }
+=======
+>>>>>>> develop
 .navbar-brand-responsive{
   display: none;
 }
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+<<<<<<< HEAD
     color: orange;
     outline: none;
 }
 .navbar-white .navbar-brand:hover, .navbar-white .navbar-brand:focus {
     color: teal;
     outline: none;
+=======
+  color: orange;
+  outline: none;
+>>>>>>> develop
 }
 .nav-container{
   display:grid;
@@ -181,6 +198,7 @@ ul.nav-right > li > a{
   outline: none;
   padding: 0px 5px;
 }
+<<<<<<< HEAD
 .navbar-white ul.nav-right > li > a{
 	display: block;
 	font-weight: 400;
@@ -188,22 +206,30 @@ ul.nav-right > li > a{
   outline: none;
   padding: 0px 5px;
 }
+=======
+>>>>>>> develop
 ul.nav-right > li > a:focus, .navbar-default .nav-right > li > a:hover {
   color: orange;
   background-color: transparent;
 }
+<<<<<<< HEAD
 ul.nav-right > li > a:focus, .navbar-white .nav-right > li > a:hover {
   color: teal;
   background-color: transparent;
 }
+=======
+>>>>>>> develop
 .navbar-default .nav-right > .active > a, .navbar-default .nav-right > .active > a:focus, .navbar-default .nav-right > .active > a:hover {
   color: #fffde0;
   background-color: transparent;
 }
+<<<<<<< HEAD
 .navbar-white .nav-right > .active > a, .navbar-white .nav-right > .active > a:focus, .navbar-white .nav-right > .active > a:hover {
   color: teal;
   background-color: transparent;
 }
+=======
+>>>>>>> develop
 .nav-top{
   top: 0;
 }
@@ -211,6 +237,10 @@ ul.nav-right > li > a:focus, .navbar-white .nav-right > li > a:hover {
 Navbar End
 ***********************************/
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> develop
 /***********************************
 Header Start
 ***********************************/
@@ -254,15 +284,20 @@ Footer Start
 ***********************************/
 .footer{
 	display: block;
+<<<<<<< HEAD
 	padding: 35px;
   bottom: 0;
   background-color: white;
   border-bottom: 4px solid teal;
+=======
+	padding: 40px;
+>>>>>>> develop
 }
 /***********************************
 Footer End
 ***********************************/
 
+<<<<<<< HEAD
 .bottom-shadow {
   -webkit-box-shadow: 0 3px 3px -3px black;
   -moz-box-shadow: 0 3px 3px -3px black;
@@ -317,6 +352,14 @@ Footer End
   margin: 7px auto;
 }
 /**********************************
+=======
+
+<<<<<<< HEAD
+**********************************
+=======
+/**********************************
+>>>>>>> develop
+>>>>>>> develop
 Grid System Start
 ***********************************/
 .box-row{
