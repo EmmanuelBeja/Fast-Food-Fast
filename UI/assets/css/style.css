@@ -12,6 +12,7 @@ body{
 section{
 	margin: 40px auto;
   height: 480px;
+>>>>>>> develop
 }
 
 
@@ -23,6 +24,7 @@ a{
 img{
   width:100%
 }
+>>>>>>> develop
 
 /***********************************
 Buttons start
@@ -126,6 +128,10 @@ Navbar Start
     padding: 5px 0;
     transition: all 0.3s;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> develop
 
 .navbar-white {
     background-color: white;
@@ -135,6 +141,11 @@ Navbar Start
     border-bottom: 1px solid whitesmoke;
 }
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> develop
+>>>>>>> develop
 .navbar-brand {
 	  color: white;
     font-size: 36px;
@@ -146,6 +157,7 @@ Navbar Start
   font-size: 36px;
   font-family: "Times New Roman", Times, serif;
 }
+>>>>>>> develop
 .navbar-brand-responsive{
   display: none;
 }
@@ -156,6 +168,7 @@ Navbar Start
 .navbar-white .navbar-brand:hover, .navbar-white .navbar-brand:focus {
     color: teal;
     outline: none;
+>>>>>>> develop
 }
 .nav-container{
   display:grid;
@@ -188,6 +201,7 @@ ul.nav-right > li > a{
   outline: none;
   padding: 0px 5px;
 }
+>>>>>>> develop
 ul.nav-right > li > a:focus, .navbar-default .nav-right > li > a:hover {
   color: orange;
   background-color: transparent;
@@ -196,6 +210,7 @@ ul.nav-right > li > a:focus, .navbar-white .nav-right > li > a:hover {
   color: teal;
   background-color: transparent;
 }
+>>>>>>> develop
 .navbar-default .nav-right > .active > a, .navbar-default .nav-right > .active > a:focus, .navbar-default .nav-right > .active > a:hover {
   color: #fffde0;
   background-color: transparent;
@@ -204,6 +219,7 @@ ul.nav-right > li > a:focus, .navbar-white .nav-right > li > a:hover {
   color: teal;
   background-color: transparent;
 }
+>>>>>>> develop
 .nav-top{
   top: 0;
 }
@@ -211,6 +227,7 @@ ul.nav-right > li > a:focus, .navbar-white .nav-right > li > a:hover {
 Navbar End
 ***********************************/
 
+>>>>>>> develop
 /***********************************
 Header Start
 ***********************************/
@@ -258,11 +275,13 @@ Footer Start
   bottom: 0;
   background-color: white;
   border-bottom: 4px solid teal;
+>>>>>>> develop
 }
 /***********************************
 Footer End
 ***********************************/
 
+<<<<<<< HEAD
 .bottom-shadow {
   -webkit-box-shadow: 0 3px 3px -3px black;
   -moz-box-shadow: 0 3px 3px -3px black;
@@ -332,6 +351,8 @@ Footer End
   text-align:right;
 }
 /**********************************
+>>>>>>> develop
+>>>>>>> develop
 Grid System Start
 ***********************************/
 .box-row{
