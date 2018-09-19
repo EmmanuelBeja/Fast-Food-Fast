@@ -14,6 +14,9 @@ section{
   height: 480px;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> develop
 >>>>>>> develop
 >>>>>>> develop
 }
@@ -27,6 +30,8 @@ a{
 img{
   width:100%
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 .modal {
@@ -71,6 +76,7 @@ padding: 20px 50px 20px 20px;
 margin: 5px auto;
 }
 =======
+>>>>>>> develop
 >>>>>>> develop
 >>>>>>> develop
 
@@ -181,6 +187,9 @@ Navbar Start
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> develop
 >>>>>>> develop
 >>>>>>> develop
 
@@ -196,7 +205,10 @@ Navbar Start
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> develop
 >>>>>>> develop
 >>>>>>> develop
 >>>>>>> develop
@@ -213,6 +225,9 @@ Navbar Start
 }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> develop
 >>>>>>> develop
 >>>>>>> develop
 .navbar-brand-responsive{
@@ -227,6 +242,9 @@ Navbar Start
     outline: none;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> develop
 >>>>>>> develop
 >>>>>>> develop
 }
@@ -263,6 +281,9 @@ ul.nav-right > li > a{
 }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> develop
 >>>>>>> develop
 >>>>>>> develop
 ul.nav-right > li > a:focus, .navbar-default .nav-right > li > a:hover {
@@ -275,6 +296,9 @@ ul.nav-right > li > a:focus, .navbar-white .nav-right > li > a:hover {
 }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> develop
 >>>>>>> develop
 >>>>>>> develop
 .navbar-default .nav-right > .active > a, .navbar-default .nav-right > .active > a:focus, .navbar-default .nav-right > .active > a:hover {
@@ -287,6 +311,9 @@ ul.nav-right > li > a:focus, .navbar-white .nav-right > li > a:hover {
 }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> develop
 >>>>>>> develop
 >>>>>>> develop
 .nav-top{
@@ -298,6 +325,9 @@ Navbar End
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> develop
 >>>>>>> develop
 >>>>>>> develop
 /***********************************
@@ -349,6 +379,9 @@ Footer Start
   border-bottom: 4px solid teal;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> develop
 >>>>>>> develop
 >>>>>>> develop
 }
@@ -359,6 +392,9 @@ Footer End
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> develop
 >>>>>>> develop
 .bottom-shadow {
   -webkit-box-shadow: 0 3px 3px -3px black;
@@ -429,10 +465,16 @@ Footer End
   text-align:right;
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> develop
 
 .panel h4{
   margin:5px auto;
 }
+<<<<<<< HEAD
+/**********************************
+=======
 
 .hello-message{
   margin: 20px;
@@ -450,6 +492,7 @@ Footer End
 /**********************************
 =======
 /**********************************
+>>>>>>> develop
 >>>>>>> develop
 >>>>>>> develop
 >>>>>>> develop
@@ -583,9 +626,13 @@ Responsive media queries Start
 
   .list-item {
 <<<<<<< HEAD
+    display: flex;
+=======
+<<<<<<< HEAD
     display: inline-table;
 =======
     display: flex;
+>>>>>>> develop
 >>>>>>> develop
     min-height: 50px;
     border-bottom: 1px solid whitesmoke;
@@ -660,9 +707,13 @@ Responsive media queries Start
 
   .list-item {
 <<<<<<< HEAD
+    display: flex;
+=======
+<<<<<<< HEAD
     display: inline-table;
 =======
     display: flex;
+>>>>>>> develop
 >>>>>>> develop
     min-height: 50px;
     border-bottom: 1px solid whitesmoke;
