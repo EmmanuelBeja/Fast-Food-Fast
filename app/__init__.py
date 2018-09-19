@@ -73,6 +73,22 @@ def create_app(config_name):
                 'client_adress': order['client_adress']
             })
             response.status_code = 200
+
+    @app.route('/v1/orders', methods=['POST'])
+    def orders():
+        #POST
+        order_id = request.args.get('order_id')
+        food_name = str(request.args.get('food_name'))
+        food_price = str(request.args.get('food_price'))
+        client_name = str(request.args.get('client_name'))
+        client_adress = str(request.args.get('client_adress'))
+
+        if order_id:
+            order = Order(order_id=order_id, food_name=food_name, food_price=food_price, client_name=client_name, client_adress=client_adress)
+            result = order.save()
+            response = jsonify(result)
+            response.status_code = 201
+
             return response
 
     return app
