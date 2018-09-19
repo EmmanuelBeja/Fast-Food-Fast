@@ -1,47 +1,14 @@
 # Fast-Food-Fast
-<<<<<<< HEAD
-[![Build Status](https://travis-ci.org/EmmanuelBeja/Fast-Food-Fast.svg?branch=ft-manipulateorder-160341506)](https://travis-ci.org/EmmanuelBeja/Fast-Food-Fast) [![Coverage Status](https://coveralls.io/repos/github/EmmanuelBeja/Fast-Food-Fast/badge.svg?branch=ft-manipulateorder-160341506)](https://coveralls.io/github/EmmanuelBeja/Fast-Food-Fast?branch=ft-manipulateorder-160341506)
-
-A food delivery service app for a restaurant.
-
-## Manipulate Orders:
-
- - Get specific order by its order_id.
- - Update specific order by its order_id.
- - Delete specific order by its order_id.
-=======
-<<<<<<< HEAD
-[![Build Status](https://travis-ci.org/EmmanuelBeja/Fast-Food-Fast.svg?branch=ft-ordercreation-160341546)](https://travis-ci.org/EmmanuelBeja/Fast-Food-Fast) [![Coverage Status](https://coveralls.io/repos/github/EmmanuelBeja/Fast-Food-Fast/badge.svg?branch=ft-ordercreation-160341546)](https://coveralls.io/github/EmmanuelBeja/Fast-Food-Fast?branch=ft-ordercreation-160341546)
-
-A food delivery service app for a restaurant.
-
-## Place Order:
-
-This branch holds code to place an order
->>>>>>> API
-
-
-## Routes
-
-<<<<<<< HEAD
- - GET /v1/orders/<int:order_id>
- - UPDATE /v1/orders/<int:order_id>
- - DELETE /v1/orders/<int:order_id>
-=======
- - POST /v1/orders
-=======
-[![Build Status](https://travis-ci.org/EmmanuelBeja/Fast-Food-Fast.svg?branch=ft-allorders-160341465)](https://travis-ci.org/EmmanuelBeja/Fast-Food-Fast) [![Coverage Status](https://coveralls.io/repos/github/EmmanuelBeja/Fast-Food-Fast/badge.svg?branch=API)](https://coveralls.io/github/EmmanuelBeja/Fast-Food-Fast?branch=API)
+[![Build Status](https://travis-ci.org/EmmanuelBeja/Fast-Food-Fast.svg?branch=ft-ordercreation-160341546)](https://travis-ci.org/EmmanuelBeja/Fast-Food-Fast) [![Coverage Status](https://coveralls.io/repos/github/EmmanuelBeja/Fast-Food-Fast/badge.svg?branch=API)](https://coveralls.io/github/EmmanuelBeja/Fast-Food-Fast?branch=API)
 
 A platform where people get to order food added by the admin. The admin can then accept decline or complete the orders made.
-
->>>>>>> API
 
 
  To interact with the api endpoints, visit the link [here](https://emmanuelbeja-fast-food-fast.herokuapp.com/v1/orders)<br>
 
 ## Use the following endpoints to perform the specified tasks
 
-| 	Endpoint                       | Functionality                                  |                  
+| 	Endpoint                   | Functionality                                  |                  
 | ---------------------------------| -----------------------------------------------|
 | POST /v1/orders                  | Create an order                                |
 | GET /v1/orders                   | Retrieve posted orders                         |
@@ -89,7 +56,6 @@ A platform where people get to order food added by the admin. The admin can then
 1. Fork the project to your github account.
 
 2. Clone it to your local machine.
->>>>>>> API
 
 3. Create a feature branch from develop branch :
 
