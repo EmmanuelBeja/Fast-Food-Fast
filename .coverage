@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 !coverage.py: This is a private format, don't read it directly!{"arcs":{"/home/wolf/Desktop/andela/Fast-Food-Fast/tests.py":[[25,-3],[6,9],[-12,14],[4,6],[15,-12],[19,20],[17,-9],[22,-17],[10,12],[-9,9],[9,10],[20,21],[12,17],[21,22],[-3,3],[14,15],[-17,19],[3,4],[9,25]]}}
+=======
+!coverage.py: This is a private format, don't read it directly!{"arcs":{"/home/wolf/Desktop/andela/Fast-Food-Fast/tests.py":[[6,9],[-12,14],[9,31],[21,-12],[-9,9],[9,10],[14,15],[24,-9],[-3,3],[27,-24],[19,20],[15,17],[17,18],[31,-3],[26,27],[4,6],[20,21],[10,12],[12,24],[18,19],[3,4],[-24,26]]}}
+>>>>>>> API
