@@ -1,11 +1,6 @@
 # Fast-Food-Fast
 A food delivery service app for a restaurant.
 
-This feature is a design of the admin page for managing food items.
-
-  - Edit
-  - Delete
-  - Update
 
 ## Author
 
