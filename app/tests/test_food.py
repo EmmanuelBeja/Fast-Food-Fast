@@ -30,7 +30,6 @@ class TestOrders(TestBase):
         """ Test for food creation """
         resource = self.client.post('/v1/food',
                 data=self.create_food, content_type='application/json')
-
         data = json.loads(resource.data.decode())
         self.assertEqual(resource.status_code, 201)
         self.assertEqual(resource.content_type, 'application/json')
