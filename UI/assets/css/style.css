@@ -12,13 +12,6 @@ body{
 section{
 	margin: 40px auto;
   height: 480px;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> develop
->>>>>>> develop
->>>>>>> develop
 }
 
 
@@ -30,9 +23,10 @@ a{
 img{
   width:100%
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
+.word-center{
+  text-align:center;
+}
 
 .modal {
 display: block;
@@ -41,7 +35,7 @@ max-width: 100%;
 height: 400px;
 max-height: 100%;
 position: fixed;
-z-index: 100;
+z-index: 1000;
 left: 50%;
 top: 50%;
 transform: translate(-50%, -50%);
@@ -75,10 +69,6 @@ padding: 20px 50px 20px 20px;
 .modal h1{
 margin: 5px auto;
 }
-=======
->>>>>>> develop
->>>>>>> develop
->>>>>>> develop
 
 /***********************************
 Buttons start
@@ -103,6 +93,24 @@ Buttons start
   text-align: center;
   text-decoration: none;
 	width: auto;
+}
+.btn-brown {
+    border: 1px solid brown;
+    border-radius: 5px;
+    background-color: brown;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    width: auto;
+}
+.btn-green {
+    border: 1px solid green;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    width: auto;
 }
 .btn-darkblue{
   border: 1px solid #00008b9c;
@@ -132,10 +140,10 @@ Buttons start
   width: auto;
 }
 .btn-small{
-	padding: 5px 10px!important;
+	padding: 4px 10px!important;
 }
 .btn-large{
-	padding: 8px 12px!important;
+	padding: 5px 12px!important;
 }
 /***********************************
 Button End
@@ -156,7 +164,7 @@ Button End
   border: 1px solid #abaaaa;
 }
 .panel{
-  border: 1px solid whitesmoke;
+  border: 1px solid #3e3e3e3e;
   background-color: white;
 	height: 100%;
 	margin:20px;
@@ -182,16 +190,6 @@ Navbar Start
     padding: 5px 0;
     transition: all 0.3s;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> develop
->>>>>>> develop
->>>>>>> develop
 
 .navbar-white {
     background-color: white;
@@ -201,17 +199,6 @@ Navbar Start
     border-bottom: 1px solid whitesmoke;
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> develop
->>>>>>> develop
->>>>>>> develop
->>>>>>> develop
 .navbar-brand {
 	  color: white;
     font-size: 36px;
@@ -223,13 +210,6 @@ Navbar Start
   font-size: 36px;
   font-family: "Times New Roman", Times, serif;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> develop
->>>>>>> develop
->>>>>>> develop
 .navbar-brand-responsive{
   display: none;
 }
@@ -240,13 +220,6 @@ Navbar Start
 .navbar-white .navbar-brand:hover, .navbar-white .navbar-brand:focus {
     color: teal;
     outline: none;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> develop
->>>>>>> develop
->>>>>>> develop
 }
 .nav-container{
   display:grid;
@@ -279,13 +252,6 @@ ul.nav-right > li > a{
   outline: none;
   padding: 0px 5px;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> develop
->>>>>>> develop
->>>>>>> develop
 ul.nav-right > li > a:focus, .navbar-default .nav-right > li > a:hover {
   color: orange;
   background-color: transparent;
@@ -294,13 +260,6 @@ ul.nav-right > li > a:focus, .navbar-white .nav-right > li > a:hover {
   color: teal;
   background-color: transparent;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> develop
->>>>>>> develop
->>>>>>> develop
 .navbar-default .nav-right > .active > a, .navbar-default .nav-right > .active > a:focus, .navbar-default .nav-right > .active > a:hover {
   color: #fffde0;
   background-color: transparent;
@@ -309,13 +268,6 @@ ul.nav-right > li > a:focus, .navbar-white .nav-right > li > a:hover {
   color: teal;
   background-color: transparent;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> develop
->>>>>>> develop
->>>>>>> develop
 .nav-top{
   top: 0;
 }
@@ -323,13 +275,6 @@ ul.nav-right > li > a:focus, .navbar-white .nav-right > li > a:hover {
 Navbar End
 ***********************************/
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> develop
->>>>>>> develop
->>>>>>> develop
 /***********************************
 Header Start
 ***********************************/
@@ -344,6 +289,10 @@ Header Start
   background-color: RGBA(0, 0, 0, 0.67);
   min-height: 570px;
   width: 100%;
+  padding-bottom: 50px;
+}
+.index-container{
+  height: 100px;
 }
 .border-left-orange{
   border-left: 4px solid orange;
@@ -377,25 +326,11 @@ Footer Start
   bottom: 0;
   background-color: white;
   border-bottom: 4px solid teal;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> develop
->>>>>>> develop
->>>>>>> develop
 }
 /***********************************
 Footer End
 ***********************************/
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> develop
->>>>>>> develop
 .bottom-shadow {
   -webkit-box-shadow: 0 3px 3px -3px black;
   -moz-box-shadow: 0 3px 3px -3px black;
@@ -413,7 +348,6 @@ Footer End
 .nav-img-icons{
   height:35px;
   width:35px;
-  margin-top:-5px;
 }
 .user-avatar{
   border-radius:50px
@@ -464,17 +398,10 @@ Footer End
 .order-description{
   text-align:right;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> develop
 
 .panel h4{
   margin:5px auto;
 }
-<<<<<<< HEAD
-/**********************************
-=======
 
 .hello-message{
   margin: 20px;
@@ -490,12 +417,6 @@ Footer End
   display: table;
 }
 /**********************************
-=======
-/**********************************
->>>>>>> develop
->>>>>>> develop
->>>>>>> develop
->>>>>>> develop
 Grid System Start
 ***********************************/
 .box-row{
@@ -556,11 +477,31 @@ Grid System Start
 Grid System End
 ***********************************/
 
+.featured{
+  background: white;
+  padding-top: 20px;
+  margin: 0px auto 50px auto;
+  border-radius: 5px;
+}
 
+
+.text-fit{
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 /***********************************
 Responsive media queries Start
 ***********************************/
 @media (min-width: 551px) and (max-width: 980px){
+  .featured{
+    background: white;
+    padding-top: 20px;
+    margin: 0px auto 10px auto;
+    border-radius: 5px;
+  }
 	.box-row{
 	 display: table;
 	 padding: 2px;
@@ -625,15 +566,7 @@ Responsive media queries Start
   }
 
   .list-item {
-<<<<<<< HEAD
-    display: flex;
-=======
-<<<<<<< HEAD
     display: inline-table;
-=======
-    display: flex;
->>>>>>> develop
->>>>>>> develop
     min-height: 50px;
     border-bottom: 1px solid whitesmoke;
     margin-bottom: 2px;
@@ -642,6 +575,12 @@ Responsive media queries Start
 }
 
 @media (min-width: 100px) and (max-width: 550px) {
+  .featured{
+    background: white;
+    padding-top: 20px;
+    margin: 0px auto 10px auto;
+    border-radius: 5px;
+  }
 	.box-row{
 	 display: table;
 	 padding: 2px;
@@ -706,15 +645,7 @@ Responsive media queries Start
   }
 
   .list-item {
-<<<<<<< HEAD
-    display: flex;
-=======
-<<<<<<< HEAD
     display: inline-table;
-=======
-    display: flex;
->>>>>>> develop
->>>>>>> develop
     min-height: 50px;
     border-bottom: 1px solid whitesmoke;
     margin-bottom: 2px;

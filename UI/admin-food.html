@@ -3,102 +3,132 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fast Food Fast|Admin</title>
+    <title>Fast Food Fast</title>
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
 
-  <nav class="navbar-white nav-top bottom-shadow">
-    <div class="nav-container">
-      <a class="navbar-brand" href="index.html">Fast Food Fast</a>
+  <!-- header start-->
+  <div class="header">
+    <div class="bg-color">
 
-      <ul class="nav-right">
-        <li class="navbar-brand-responsive"> <a href="index.html">Fast Food Fast</a></li>
-        <li><a href="user-profile.html" > <img src="assets/img/avatar.png" class="nav-img-icons user-avatar" alt=""> </a></li>
-        <li><a href="admin-food.html" >Food</a></li>
-        <li><a href="admin-home.html" >Home</a></li>
-      </ul>
-    </div>
-  </nav>
+      <nav class="navbar-default nav-top">
+        <div class="nav-container">
+          <a class="navbar-brand" href="index.html">Fast Food Fast > Admin</a>
 
-  <section class="container">
+          <ul class="nav-right">
+            <li class="navbar-brand-responsive"> <a href="index.html">Fast Food Fast</a> </li>
+            <li><a href="admin-profile.html" > <img src="assets/img/avatar.png" class="nav-img-icons user-avatar" alt=""> </a></li>
+            <li><a href="admin-food.html" class="btn-normal btn-small">Food</a></li>
+            <li><a href="admin-home.html" class="btn-normal btn-small">Home</a></li>
+          </ul>
+        </div>
+      </nav>
 
-        <div class="box-col-8">
-          <div class="hello-message">
-            Hello Admin.
-            <a href="" id="open-button" class="open-button btn-lightblue btn-large btn-add-food">Add</a>
-          </div>
+       <section class="container featured box-row">
+             <div class="">
+               <h2 class="word-center">Food</h2>
+             </div>
 
-          <div class="panel">
-            <h4>
-              Food Items
-            </h4>
-            <div class="">
-              <div class="list-item">
-                <div class="box-col-2">
-                  <img src="assets/img/chickenbiriani.jpg" class="order-image" alt="">
-                </div>
-                <div class="box-col-6 order-description" >
-                  Chicken Biriani | Price: Ksh.350
-                  <div class="box-col-8">
-                    <button type="button" class="btn-lightblue btn-small" name="button"> Edit</button>
-                    <button type="button" class="btn-maroon btn-small" name="button"> Delete</button>
+             <div class="box-col-5">
+
+
+               <div class="panel">
+                 <h4>
+                   Food Items
+                 </h4>
+                 <div class="">
+                   <div class="list-item">
+                     <div class="box-col-2">
+                       <img src="assets/img/chickenbiriani.jpg" class="order-image" alt="">
+                     </div>
+                     <div class="box-col-6 order-description" >
+                       Chicken Biriani | Price: Ksh.350
+                       <div class="box-col-8">
+                         <a href="admin-edit-food.html" class="btn-lightblue btn-small" name="button"> Edit</a>
+                         <button type="button" class="btn-maroon btn-small" name="button"> Delete</button>
+                       </div>
+                     </div>
+                   </div>
+                   <div class="list-item">
+                     <div class="box-col-2">
+                       <img src="assets/img/frenchfries.jpg" class="order-image" alt="">
+                     </div>
+                     <div class="box-col-6 order-description" >
+                       French Fries | Price: Ksh.150
+                       <div class="box-col-8">
+                         <a href="admin-edit-food.html" class="btn-lightblue btn-small" name="button"> Edit</a>
+                         <button type="button" class="btn-maroon btn-small" name="button"> Delete</button>
+                       </div>
+                     </div>
+                     </div>
+                     <div class="list-item">
+                       <div class="box-col-2">
+                         <img src="assets/img/grilledfish.jpg" class="order-image" alt="">
+                       </div>
+                       <div class="box-col-6 order-description" >
+                         Grilled Fish | Price: Ksh.350
+                         <div class="box-col-8">
+                           <a href="admin-edit-food.html" class="btn-lightblue btn-small" name="button"> Edit</a>
+                           <button type="button" class="btn-maroon btn-small" name="button"> Delete</button>
+                         </div>
+                       </div>
+                       </div>
+                       <div class="list-item">
+                         <div class="box-col-2">
+                           <img src="assets/img/hotdog.jpg" class="order-image" alt="">
+                         </div>
+                         <div class="box-col-6 order-description" >
+                           hotdog | Price: Ksh.100
+                           <div class="box-col-8">
+                             <a href="admin-edit-food.html" class="btn-lightblue btn-small" name="button"> Edit</a>
+                             <button type="button" class="btn-maroon btn-small" name="button"> Delete</button>
+                           </div>
+                         </div>
+                         </div>
+                   </div>
+                 </div>
+
+               </div>
+
+               <div class="box-col-3">
+                 <div class="panel">
+                    <div class="">
+                      <form class="form" action="" method="post" enctype="multipart/form-data">
+                        <h4>Add Food Item</h4>
+                        <div class="">
+                          <label for="food-name">Food Name</label>
+                          <input type="text" name="food-name" value="" class="input" placeholder="Enter Food Name" required>
+                        </div>
+                        <div class="">
+                          <label for="food-price"> Price</label>
+                          <input type="text" name="food-price" value="" class="input" placeholder="Enter Food Price" required>
+                        </div>
+                        <div class="">
+                          <label for="food-image"> Image</label>
+                          <br>
+                          <input type="file" name="food-image" value="" required>
+                        </div>
+                        <br>
+                        <div class="">
+                          <button type="submit" name="button" class="btn-brown btn-large">Submit</button>
+                        </div>
+                      </form>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="list-item">
-                <div class="box-col-2">
-                  <img src="assets/img/frenchfries.jpg" class="order-image" alt="">
-                </div>
-                <div class="box-col-6 order-description" >
-                  French Fries | Price: Ksh.150
-                  <div class="box-col-8">
-                    <button type="button" class="btn-lightblue btn-small" name="button"> Edit</button>
-                    <button type="button" class="btn-maroon btn-small" name="button"> Delete</button>
-                  </div>
-                </div>
-                </div>
-              </div>
-            </div>
+               </div>
 
-          </div>
-        </div>
-  </section>
+       </section>
 
-<div class="modal-overlay" id="modal-overlay"></div>
-
-  <div class="modal" id="modal">
-    <div class="modal-content">
-      <h1>Add Food Item.</h1>
-
-      <form class="form" action="" method="post">
-        <div class="">
-          <label for="food-name">Food Name</label>
-          <input type="text" name="food-name" value="" class="input" placeholder="Enter Food Name" required>
-        </div>
-        <div class="">
-          <label for="food-price"> Price</label>
-          <input type="text" name="food-price" value="" class="input" placeholder="Enter Food Price" required>
-        </div>
-        <div class="">
-          <label for="food-image"> Image</label>
-          <input type="file" name="food-image" value="" class="input" required>
-        </div>
-        <br>
-        <div class="">
-          <button type="submit" name="button" class="btn-orange btn-large">Submit</button>
-
-          <button class="close-button btn-darkblue btn-large" id="close-button" style="text-align:right;margin-right:5px;"> Close</button>
-        </div>
-      </form>
     </div>
   </div>
+  <!-- header end -->
+
   <!-- footer start -->
   <footer class="footer">
       © Copyright. All Rights Reserved
   </footer>
   <!-- footer end -->
 
-  <script src="assets/js/custom.js" charset="utf-8"></script>
   </body>
 </html>
