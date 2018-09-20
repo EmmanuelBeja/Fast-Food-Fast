@@ -1,5 +1,6 @@
 .env
-/venv/
+venv
 *__pycache__
-.pytest_cache/
-.coverage
+.pytest_cache
+*.pyc
+*.DS_Store
