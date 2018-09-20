@@ -1,5 +1,6 @@
 # Fast-Food-Fast
-[![Build Status](https://travis-ci.org/EmmanuelBeja/Fast-Food-Fast.svg?branch=bg-persistent-data-storage-error-160539811)](https://travis-ci.org/EmmanuelBeja/Fast-Food-Fast) [![Coverage Status](https://coveralls.io/repos/github/EmmanuelBeja/Fast-Food-Fast/badge.svg?branch=bg-persistent-data-storage-error-160539811)](https://coveralls.io/github/EmmanuelBeja/Fast-Food-Fast?branch=bg-persistent-data-storage-error-160539811)
+[![Build Status](https://travis-ci.org/EmmanuelBeja/Fast-Food-Fast.svg?branch=ft-fooditem-creation-160539829)](https://travis-ci.org/EmmanuelBeja/Fast-Food-Fast) [![Coverage Status](https://coveralls.io/repos/github/EmmanuelBeja/Fast-Food-Fast/badge.svg?branch=ft-fooditem-creation-160539829)](https://coveralls.io/github/EmmanuelBeja/Fast-Food-Fast?branch=ft-fooditem-creation-160539829)
+
 
 A platform where people get to order food added by the admin. The admin can then accept decline or complete the orders made.
 
@@ -15,7 +16,13 @@ A platform where people get to order food added by the admin. The admin can then
 | PUT /v1/orders/<int:id>          | Update a specific order                        |                         
 | GET /v1/orders/<int:id>          | Get a specific posted order                    |
 | DELETE /v1/orders/<int:id>       | DELETE a specific posted order                 |
-
+| POST /v1/food                    | Create food item                               |
+| GET /v1/food                     | Retrieve posted food                           |
+| PUT /v1/food/<int:id>            | Update a specific food                         |                         
+| GET /v1/food/<int:id>            | Get a specific posted food                     |
+| DELETE /v1/food/<int:id>         | DELETE a specific posted food                  |
+| POST /v1/signup                  | Sign up User                                   |
+| POST /v1/login                   | Login User                                     |
 
 
 ## Application Features
@@ -38,7 +45,7 @@ A platform where people get to order food added by the admin. The admin can then
 
 ## How to Test Manually
 1. Clone the project to your local machine <br>
-		` https://github.com/EmmanuelBeja/Fast-Food-Fast.git`
+		` https://github.com/EmmanuelBeja/Fast-Food-Fast-API.git`
 2. Create Virtual Environment <br>
 		`virtualenv venv`
 3. Activate Virtual ENvironment<br>

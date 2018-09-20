@@ -10,7 +10,7 @@ def create_app(config_name):
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_object(app_config[config_name])
 
-    from .v1.orders import orders_api as api_blueprint
+    from .v1.food import food_api as api_blueprint
     app.register_blueprint(api_blueprint, url_prefix='/v1')
 
     return app
