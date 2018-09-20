@@ -1,5 +1,5 @@
 # Fast-Food-Fast
-[![Build Status](https://travis-ci.org/EmmanuelBeja/Fast-Food-Fast.svg?branch=ft-ordercreation-160341546)](https://travis-ci.org/EmmanuelBeja/Fast-Food-Fast) [![Coverage Status](https://coveralls.io/repos/github/EmmanuelBeja/Fast-Food-Fast/badge.svg?branch=API)](https://coveralls.io/github/EmmanuelBeja/Fast-Food-Fast?branch=API)
+[![Build Status](https://travis-ci.org/EmmanuelBeja/Fast-Food-Fast.svg?branch=bg-persistent-data-storage-error-160539811)](https://travis-ci.org/EmmanuelBeja/Fast-Food-Fast) [![Coverage Status](https://coveralls.io/repos/github/EmmanuelBeja/Fast-Food-Fast/badge.svg?branch=bg-persistent-data-storage-error-160539811)](https://coveralls.io/github/EmmanuelBeja/Fast-Food-Fast?branch=bg-persistent-data-storage-error-160539811)
 
 A platform where people get to order food added by the admin. The admin can then accept decline or complete the orders made.
 
@@ -8,7 +8,7 @@ A platform where people get to order food added by the admin. The admin can then
 
 ## Use the following endpoints to perform the specified tasks
 
-| 	Endpoint                   | Functionality                                  |                  
+| 	Endpoint                       | Functionality                                  |                  
 | ---------------------------------| -----------------------------------------------|
 | POST /v1/orders                  | Create an order                                |
 | GET /v1/orders                   | Retrieve posted orders                         |
