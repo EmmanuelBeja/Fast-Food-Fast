@@ -4,6 +4,8 @@
 
   A platform where people get to order food added by the admin. The admin can then accept decline or complete the orders made.
 
+  To interact with the app UI, click link
+  [here](https://emmanuelbeja.github.io/Fast-Food-Fast/)<br>
 
    To interact with the api endpoints, visit the link [here](https://emmanuelbeja-fast-food-fast.herokuapp.com/v1/orders)<br>
 
@@ -13,17 +15,21 @@
   | ---------------------------------| -----------------------------------------------|
   | POST /v1/orders                  | Create an order                                |
   | GET /v1/orders                   | Retrieve posted orders                         |
-  | PUT /v1/orders/<int:id>          | Update a specific order                        |                         
-  | GET /v1/orders/<int:id>          | Get a specific posted order                    |
-  | DELETE /v1/orders/<int:id>       | DELETE a specific posted order                 |
+  | PUT /v1/orders/<int:order_id>    | Update a specific order                        |                         
+  | GET /v1/orders/<int:order_id>    | Get a specific posted order                    |
+  | DELETE /v1/orders/<int:order_id> | DELETE a specific posted order                 |
   | POST /v1/food                    | Create food item                               |
   | GET /v1/food                     | Retrieve posted food                           |
-  | PUT /v1/food/<int:id>            | Update a specific food                         |                         
-  | GET /v1/food/<int:id>            | Get a specific posted food                     |
-  | DELETE /v1/food/<int:id>         | DELETE a specific posted food                  |
+  | PUT /v1/food/<int:food_id>       | Update a specific food                         |                         
+  | GET /v1/food/<int:food_id>       | Get a specific posted food                     |
+  | DELETE /v1/food/<int:food_id>    | DELETE a specific posted food                  |
   | POST /v1/signup                  | Sign up User                                   |
   | POST /v1/login                   | Login User                                     |
-
+  | PUT /v1/users/<int:id>           | Update a specific user                         |                         
+  | GET /v1/users/<int:id>           | Get a specific signed up user                  |
+  | DELETE /v1/users/<int:id>        | DELETE a specific signed up user               |
+  | GET /v1/users                    | Get all signed up users                        |
+  | GET /v1/auth/logout              | Logout a user                                  |
 
   ## Application Features
 
