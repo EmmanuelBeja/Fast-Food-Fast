@@ -1,5 +1,5 @@
 # Fast-Food-Fast
-[![Build Status](https://travis-ci.org/EmmanuelBeja/Fast-Food-Fast.svg?branch=ft-fooditem-creation-160539829)](https://travis-ci.org/EmmanuelBeja/Fast-Food-Fast) [![Coverage Status](https://coveralls.io/repos/github/EmmanuelBeja/Fast-Food-Fast/badge.svg?branch=ft-fooditem-creation-160539829)](https://coveralls.io/github/EmmanuelBeja/Fast-Food-Fast?branch=ft-fooditem-creation-160539829
+[![Build Status](https://travis-ci.org/EmmanuelBeja/Fast-Food-Fast.svg?branch=ft-fooditem-creation-160539829)](https://travis-ci.org/EmmanuelBeja/Fast-Food-Fast) [![Coverage Status](https://coveralls.io/repos/github/EmmanuelBeja/Fast-Food-Fast/badge.svg?branch=ft-fooditem-creation-160539829)](https://coveralls.io/github/EmmanuelBeja/Fast-Food-Fast?branch=ft-fooditem-creation-160539829)
 
 
   A platform where people get to order food added by the admin. The admin can then accept decline or complete the orders made.
