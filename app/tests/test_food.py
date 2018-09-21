@@ -6,6 +6,7 @@ from flask import url_for, abort, session
 from flask_testing import TestCase
 from app import create_app
 
+
 class TestBase(TestCase):
     """ Tests Base """
 
@@ -16,22 +17,28 @@ class TestBase(TestCase):
 
         return app
 
+
 class TestOrders(TestBase):
     """ Tests for the Orders """
     def setUp(self):
         # pass in test configurations
         app = create_app(config_name="testing")
-        self.create_food = json.dumps(dict(food_name="mchele",
-                food_price= 200, food_image='mchele.jpg'))
+        self.create_food = json.dumps(dict(
+                food_name="mchele",
+                food_price=200,
+                food_image='mchele.jpg'))
         self.client = app.test_client()
-        self.client.post('/v1/food', data = self.create_food, content_type='application/json')
-
-
+        self.client.post(
+            '/v1/food',
+            data=self.create_food,
+            content_type='application/json')
 
     def test_food_creation(self):
         """ Test for food creation """
-        resource = self.client.post('/v1/food',
-                data=self.create_food, content_type='application/json')
+        resource = self.client.post(
+                '/v1/food',
+                data=self.create_food,
+                content_type='application/json')
 
         data = json.loads(resource.data.decode())
         self.assertEqual(resource.status_code, 201)
@@ -40,13 +47,15 @@ class TestOrders(TestBase):
 
     def test_get_all_foods(self):
         """ Test for getting all foods """
-        resource = self.client.get('/v1/food', data=json.dumps(dict()), content_type='application/json')
+        resource = self.client.get(
+            '/v1/food',
+            data=json.dumps(dict()),
+            content_type='application/json')
 
         data = json.loads(resource.data.decode())
         self.assertEqual(resource.status_code, 200)
         self.assertEqual(resource.content_type, 'application/json')
         self.assertEqual(data['message'].strip(), 'Successful.')
-
 
     def test_get_food_by_order_id(self):
         """ Test for getting specific foods """
@@ -55,8 +64,10 @@ class TestOrders(TestBase):
 
     def test_food_can_be_edited(self):
         """ test food can be edited """
-        resource = self.client.put('/v1/food/1',
-                data=self.create_food, content_type='application/json')
+        resource = self.client.put(
+                '/v1/food/1',
+                data=self.create_food,
+                content_type='application/json')
 
         data = json.loads(resource.data.decode())
         self.assertEqual(resource.status_code, 201)

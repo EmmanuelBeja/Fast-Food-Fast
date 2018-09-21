@@ -1,10 +1,12 @@
 import os
 
+
 class Config(object):
     """
     Common configurations
     """
     DEBUG = True
+
 
 class DevelopmentConfig(Config):
     """
@@ -13,6 +15,7 @@ class DevelopmentConfig(Config):
     DEBUG = True
     SECRET_KEY = "SECRET"
 
+
 class ProductionConfig(Config):
     """
     Production configurations
@@ -20,6 +23,7 @@ class ProductionConfig(Config):
     DEBUG = False
     TESTING = False
     SECRET_KEY = "SECRET"
+
 
 class TestingConfig(Config):
     """
