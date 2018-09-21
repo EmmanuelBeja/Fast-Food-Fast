@@ -12,12 +12,15 @@ foodObject = Food()
 @food_api.route('/food', methods=["GET", "POST"])
 def food():
     """ Method to create and retrieve food."""
-    data = request.get_json()
-    food_name = data['food_name']
-    food_price = data['food_price']
-    food_image = data['food_image']
-    res = foodObject.create_food(food_name, food_price,food_image)
-    return res
+    if request.method == "POST":
+        data = request.get_json()
+        food_name = data['food_name']
+        food_price = data['food_price']
+        food_image = data['food_image']
+        res = foodObject.create_food(food_name, food_price,food_image)
+        return res
+    data = foodObject.get_foods()
+    return data
 
 @food_api.route('/food/<int:food_id>', methods=['GET', 'PUT', 'DELETE'])
 def food_manipulation(food_id, **kwargs):

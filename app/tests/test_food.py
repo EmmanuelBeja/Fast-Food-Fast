@@ -38,6 +38,16 @@ class TestOrders(TestBase):
         self.assertEqual(resource.content_type, 'application/json')
         self.assertEqual(data['message'].strip(), 'Successful.')
 
+    def test_get_all_foods(self):
+        """ Test for getting all foods """
+        resource = self.client.get('/v1/food', data=json.dumps(dict()), content_type='application/json')
+
+        data = json.loads(resource.data.decode())
+        self.assertEqual(resource.status_code, 200)
+        self.assertEqual(resource.content_type, 'application/json')
+        self.assertEqual(data['message'].strip(), 'Successful.')
+
+
     def test_get_food_by_order_id(self):
         """ Test for getting specific foods """
         resource = self.client.get('/v1/food/1')

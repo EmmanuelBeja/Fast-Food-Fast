@@ -19,6 +19,10 @@ class Food(object):
         self.food_list.append(self.foods)
         return jsonify({"message": "Successful.", "Food":self.food_list}), 201
 
+    def get_foods(self):
+       """ get all Foods """
+       return jsonify({"message": "Successful.","Food": self.food_list}), 200
+
     def delete_food(self, food_id):
         """ delete Food """
         for food in self.food_list:
