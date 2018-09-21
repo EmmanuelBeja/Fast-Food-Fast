@@ -6,7 +6,7 @@ from .models import User
 userObject = User()
 
 
-def validdate_data(data):
+def validate_data(data):
     """validate user details"""
     try:
         # check if the username is more than 3 characters
@@ -31,12 +31,17 @@ def reg():
     """ Method to create user account."""
     if request.method == "POST":
         data = request.get_json()
-        res = validdate_data(data)
+        res = validate_data(data)
         username = data['username']
+        userphone = data['userphone']
         password = data['password']
         userRole = data['userRole']
         if res == "valid":
-            response = userObject.create(username, password, userRole)
+            response = userObject.create_user(
+                username,
+                userphone,
+                password,
+                userRole)
             return response
         return jsonify({"message": res}), 400
 
@@ -53,16 +58,37 @@ def login():
 
 @users_api.route('/users', methods=["GET"])
 def users():
-    if request.method == "GET":
-        data = userObject.get_user()
-        return jsonify({"Users": data})
-
-
-@users_api.route('/users/<int:id>', methods=["GET", "POST"])
-def user_id(id):
-    """ Method to create and retrieve a specific user."""
-    data = userObject.get_specific_user(id)
+    data = userObject.get_users()
     return data
+
+
+@users_api.route('/users/<int:id>', methods=["GET", "DELETE", "PUT"])
+def user_id(id):
+    if request.method == "GET":
+        """ Method to retrieve a specific user."""
+        data = userObject.get_specific_user(id)
+        return data
+    elif request.method == "PUT":
+        """ Method to edit a specific user."""
+        data = request.get_json()
+        res = validate_data(data)
+        username = data['username']
+        userphone = data['userphone']
+        password = data['password']
+        userRole = data['userRole']
+        if res == "valid":
+            response = userObject.update_user(
+                id,
+                username,
+                userphone,
+                password,
+                userRole)
+            return response
+        return jsonify({"message": res}), 400
+    elif request.method == "DELETE":
+        """ Method to delete a specific user."""
+        res = userObject.delete_user(id)
+        return res
 
 
 @users_api.route('/auth/logout')
@@ -72,4 +98,4 @@ def logout():
     print(session['userid'])
     session.clear()
 
-    return jsonify({"message": "Succeffuly logout."})
+    return jsonify({"message": "Succeffully logout."})

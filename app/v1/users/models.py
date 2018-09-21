@@ -7,13 +7,15 @@ class User(object):
     def __init__(self):
         """ Initialize empty user list"""
         self.user_list = []
+        self.notfound = None
 
-    def create(self, username, password, userRole):
+    def create_user(self, username, userphone, password, userRole):
         """Create users"""
         self.users = {}
         if not self.valid_username(username):
             self.id = len(self.user_list)
             self.users['username'] = username
+            self.users['userphone'] = userphone
             self.users['password'] = password
             self.users['userRole'] = userRole
             self.users['userid'] = self.id + 1
@@ -43,7 +45,52 @@ class User(object):
     def get_specific_user(self, id):
         """get specific user """
         user = [user for user in self.user_list if user['userid'] == id]
-        return jsonify({"User": user})
+        return jsonify({
+            "message": "Successful.",
+            "User": user}), 200
+
+    def get_users(self):
+        """get all user """
+        return jsonify({
+            "message": "Successful.",
+            "Users": self.user_list}), 200
+
+    def update_user(
+            self,
+            id,
+            username,
+            userphone,
+            password,
+            userRole):
+        """ update User """
+        for user in self.user_list:
+            if user['userid'] == id:
+                user['username'] = username
+                user['userphone'] = userphone
+                user['password'] = password
+                user['userRole'] = userRole
+                return jsonify({
+                    "message": "Update Successful.",
+                    "Users": self.user_list}), 201
+            self.notfound = True
+        if self.notfound is True:
+            return jsonify({
+                "message": "User doesn't exist.",
+                "Users": self.user_list}), 400
+
+    def delete_user(self, id):
+        """ delete User """
+        for user in self.user_list:
+            if user['userid'] == id:
+                self.user_list.remove(user)
+                return jsonify({
+                    "message": "Delete Successful.",
+                    "Users": self.user_list}), 201
+            self.notfound = True
+        if self.notfound is True:
+            return jsonify({
+                "message": "user doesn't exist.",
+                "Users": self.user_list}), 404
 
     def valid_username(self, username):
         """check if username exist"""
