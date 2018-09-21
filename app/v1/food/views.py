@@ -11,7 +11,7 @@ foodObject = Food()
 """Food views"""
 @food_api.route('/food', methods=["POST"])
 def food():
-    """ Method to create food."""
+    """ Method to create and retrieve food."""
     data = request.get_json()
     food_name = data['food_name']
     food_price = data['food_price']

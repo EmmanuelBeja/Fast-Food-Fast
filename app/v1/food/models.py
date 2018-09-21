@@ -18,3 +18,5 @@ class Food(object):
         self.foods['food_id'] = self.foodId + 1
         self.food_list.append(self.foods)
         return jsonify({"message": "Successful.", "Food":self.food_list}), 201
+
+    
