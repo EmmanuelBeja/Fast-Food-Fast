@@ -1,4 +1,4 @@
-"""app/tests_food.py"""
+"""app/tests_orders.py"""
 import unittest
 import os
 import json
@@ -21,33 +21,43 @@ class TestOrders(TestBase):
     def setUp(self):
         # pass in test configurations
         app = create_app(config_name="testing")
-        self.create_food = json.dumps(dict(food_name="mchele",
-                food_price= 200, food_image='mchele.jpg'))
+        self.create_order = json.dumps(dict(food_id=1,
+                client_id=1, client_adress='Likoni', status='pending'))
         self.client = app.test_client()
-        self.client.post('/v1/food', data = self.create_food, content_type='application/json')
+        self.client.post('/v1/orders', data = self.create_order, content_type='application/json')
 
 
 
-    def test_food_creation(self):
-        """ Test for food creation """
-        resource = self.client.post('/v1/food',
-                data=self.create_food, content_type='application/json')
+    def test_order_creation(self):
+        """ Test for order creation """
+        resource = self.client.post('/v1/orders',
+                data=self.create_order, content_type='application/json')
 
         data = json.loads(resource.data.decode())
         self.assertEqual(resource.status_code, 201)
         self.assertEqual(resource.content_type, 'application/json')
         self.assertEqual(data['message'].strip(), 'Successful.')
 
-    def test_get_food_by_order_id(self):
-        """ Test for getting specific foods """
-        resource = self.client.get('/v1/food/1')
+    def test_get_all_orders(self):
+        """ Test for getting all orders """
+        resource = self.client.get('/v1/orders', data=json.dumps(dict()), content_type='application/json')
+
+        data = json.loads(resource.data.decode())
+        self.assertEqual(resource.status_code, 200)
+        self.assertEqual(resource.content_type, 'application/json')
+        self.assertEqual(data['message'].strip(), 'Successful.')
+
+
+    def test_get_order_by_order_id(self):
+        """ Test for getting specific orders """
+        resource = self.client.get('/v1/orders/1')
         self.assertEqual(resource.status_code, 200)
 
-    def test_food_can_be_edited(self):
-        """ test food can be edited """
-        resource = self.client.put('/v1/food/1',
-                data=self.create_food, content_type='application/json')
-
+    def test_order_can_be_edited(self):
+        """ test order can be edited """
+        resource = self.client.put('/v1/orders/1',
+                data=self.create_order, content_type='application/json')
+                
         data = json.loads(resource.data.decode())
         self.assertEqual(resource.status_code, 201)
         self.assertEqual(resource.content_type, 'application/json')
@@ -55,7 +65,7 @@ class TestOrders(TestBase):
 
     def test_order_deletion(self):
         """Test API can delete an existing order. (DELETE request)."""
-        res = self.client.delete('/v1/food/1')
+        res = self.client.delete('/v1/orders/1')
         self.assertEqual(res.status_code, 201)
 
 if __name__ == '__main__':

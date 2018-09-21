@@ -13,4 +13,7 @@ def create_app(config_name):
     from .v1.food import food_api as api_blueprint
     app.register_blueprint(api_blueprint, url_prefix='/v1')
 
+    from .v1.orders import orders_api as api_blueprint
+    app.register_blueprint(api_blueprint, url_prefix='/v1')
+
     return app

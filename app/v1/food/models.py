@@ -19,4 +19,39 @@ class Food(object):
         self.food_list.append(self.foods)
         return jsonify({"message": "Successful.", "Food":self.food_list}), 201
 
-    
+    def delete_food(self, food_id):
+        """ delete Food """
+        for food in self.food_list:
+            if food['food_id'] == food_id:
+                self.food_list.remove(food)
+                return jsonify({"message": "Delete Successful.", "Food":self.food_list}), 201
+            self.notfound = True
+        if self.notfound == True:
+            return jsonify({"message": "No food with that id.", "Food":self.food_list}), 404
+
+
+    def update_food(self, food_id, food_name, food_price, food_image):
+        """ update Food """
+        for food in self.food_list:
+            if food['food_id'] == food_id:
+                food['food_name'] = food_name
+                food['food_price'] = food_price
+                food['food_image'] = food_image
+                return jsonify({"message": "Update Successful.", "Food":self.food_list}), 201
+            self.notfound = True
+        if self.notfound == True:
+            return jsonify({"message": "No food with that id.", "Food":self.food_list}), 404
+
+    def get_food(self, food_id):
+        """ get Food """
+        for food in self.food_list:
+            if food['food_id'] == food_id:
+                return jsonify({"message": "Successful.", "Food":food}), 200
+            self.notfound = True
+        if self.notfound == True:
+            return jsonify({"message": "No food with that id.", "Food":self.food_list}), 404
+
+    def is_loggedin(self):
+        if 'client_name' in session:
+            return True
+        return False
