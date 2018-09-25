@@ -12,8 +12,7 @@ class TestBase(TestCase):
 
     def create_app(self):
         # pass in test configurations
-        config_name = 'testing'
-        app = create_app(config_name)
+        app = create_app('testing')
 
         return app
 

@@ -1,13 +1,14 @@
 # Fast-Food-Fast
-[![Build Status](https://travis-ci.org/EmmanuelBeja/Fast-Food-Fast.svg?branch=API)](https://travis-ci.org/EmmanuelBeja/Fast-Food-Fast) [![Coverage Status](https://coveralls.io/repos/github/EmmanuelBeja/Fast-Food-Fast/badge.svg?branchAPI2)](https://coveralls.io/github/EmmanuelBeja/Fast-Food-Fast?branch=API)
-
+[![Build Status](https://travis-ci.org/EmmanuelBeja/Fast-Food-Fast.svg?branch=API)](https://travis-ci.org/EmmanuelBeja/Fast-Food-Fast)[![Coverage Status](https://coveralls.io/repos/github/EmmanuelBeja/Fast-Food-Fast/badge.svg?branchAPI2)](https://coveralls.io/github/EmmanuelBeja/Fast-Food-Fast?branch=API)[![Codacy Badge](https://api.codacy.com/project/badge/Grade/cc1707c8448648e88e8c92e949855e08)](https://www.codacy.com/app/EmmanuelBeja/Fast-Food-Fast?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=EmmanuelBeja/Fast-Food-Fast&amp;utm_campaign=Badge_Grade)[![Maintainability](https://api.codeclimate.com/v1/badges/66f80833d2476f3d6950/maintainability)](https://codeclimate.com/github/EmmanuelBeja/Fast-Food-Fast/maintainability)
 
   A platform where people get to order food added by the admin. The admin can then accept decline or complete the orders made.
 
   To interact with the app UI, click link
   [here](https://emmanuelbeja.github.io/Fast-Food-Fast/)<br>
 
-   To interact with the api endpoints, visit the link [here](https://emmanuelbeja-fast-food-fast.herokuapp.com/v1/orders)<br>
+  To interact with the api endpoints, visit the link [here](https://emmanuelbeja-fast-food-fast.herokuapp.com/v1/orders)<br>
+
+  API documentation [here](https://documenter.getpostman.com/view/5399899/RWaPv6zH)
 
   ## Use the following endpoints to perform the specified tasks
 

@@ -1,7 +1,7 @@
 """app/v1/users/views.py"""
 from flask import Flask, request, flash, redirect, url_for, jsonify, session
 from . import users_api
-from .models import User
+from app.models import User
 
 userObject = User()
 

@@ -1,7 +1,7 @@
 """/app/v1/food/views.py"""
 from flask import Flask, request, flash, redirect, url_for, jsonify, session
 from . import food_api
-from .models import Food
+from app.models import Food
 
 """instantiate class"""
 foodObject = Food()

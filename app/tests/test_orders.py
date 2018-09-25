@@ -9,19 +9,27 @@ from app import create_app
 
 class TestBase(TestCase):
     """ Tests Base """
+
     def create_app(self):
         # pass in test configurations
-        config_name = 'testing'
+        config_name = os.getenv('FLASK_CONFIG', 'testing')
         app = create_app(config_name)
 
         return app
-
 
 class TestOrders(TestBase):
     """ Tests for the Orders """
     def setUp(self):
         # pass in test configurations
-        app = create_app(config_name="testing")
+        config_name = os.getenv('FLASK_CONFIG', 'testing')
+        app = create_app(config_name)
+        self.client = app.test_client()
+
+        self.client.post(
+            '/v1/login',
+            data=json.dumps(dict(username="user1", password='Pass123')),
+            content_type='application/json')
+
         self.create_order = json.dumps(dict(
                 food_id=1,
                 client_id=1,
@@ -33,8 +41,10 @@ class TestOrders(TestBase):
             data=self.create_order,
             content_type='application/json')
 
+
     def test_order_creation(self):
         """ Test for order creation """
+
         resource = self.client.post(
                 '/v1/orders',
                 data=self.create_order,

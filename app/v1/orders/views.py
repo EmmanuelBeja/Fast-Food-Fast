@@ -1,7 +1,7 @@
 """/app/v1/orders/views.py"""
 from flask import Flask, request, flash, redirect, url_for, jsonify, session
 from . import orders_api
-from .models import Order
+from app.models import Order
 
 """instantiate class"""
 orderObject = Order()
@@ -55,3 +55,10 @@ def order_manipulation(order_id, **kwargs):
         # GET
         res = orderObject.get_order(order_id)
         return res
+
+
+@orders_api.route('/userorders/<int:client_id>', methods=['GET'])
+def userorders(client_id, **kwargs):
+    """ get a users orders"""
+    res = orderObject.get_user_orders(client_id)
+    return res        
