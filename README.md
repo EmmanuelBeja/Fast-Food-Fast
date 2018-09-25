@@ -31,13 +31,14 @@ A platform where people get to order food added by the admin. The admin can then
   | GET /v1/auth/logout              | Logout a user                                  |
 
 
-## Usage
+## API Usage
 
 ### Users:
 
 POST /v1/signup - signup user
 <br>
 {
+        <br>
 	"username": "Beja", 
 	<br>
 	"userphone": "0712991415", 
@@ -46,29 +47,37 @@ POST /v1/signup - signup user
 	<br>
 	"userRole": "client",
 	<br>
-	"confirmpass": "pass1234"<br>
+	"confirmpass": "pass1234"
+	<br>
 }
-<br><br>
+
+
 GET /v1/auth/logout  - logout user
-<br>
+
+
 POST /v1/login  - login user
 <br>
-{
+{       <br>
 	"username": "Beja",
 	<br>
 	"password": "pass1234"
 	<br>
 }
-<br>
+
+
 GET /v1/users/1  - Get user by id
-<br>
+
+
 GET /v1/users  - Get all users
-<br>
+
+
 DELETE /v1/users/1  - Delete a user
-<br>
+
+
 UPDATE /v1/users/1  - Update user details
 <br>
 {
+        <br>
 	"username": "Chayu",
 	<br>
 	"userphone": "0712991416",
@@ -80,15 +89,16 @@ UPDATE /v1/users/1  - Update user details
 	"confirmpass": "pass12345"
 	<br>
 }
-<br>
+
 
 ### Food:
 
 GET /v1/food  - Get all food items
-<br>
+
+
 POST /v1/food  - Create a food item
 <br>
-{
+{       <br>
 	"food_name": "rice",
 	<br>
 	"food_price": 200,
@@ -96,12 +106,14 @@ POST /v1/food  - Create a food item
 	"food_image": "img1.jpg"
 	<br>
 }
-<br>
+
+
 GET /v1/food/1  - Get a food item by food id
-<br>
+
+
 PUT /v1/food/1  - Edit food item details
 <br>
-{
+{       <br>
 	"food_name": "tilapia",
 	<br>
 	"food_price": 350,
@@ -109,7 +121,8 @@ PUT /v1/food/1  - Edit food item details
 	"food_image": "tilapia.jpg"
 	<br>
 }
-<br>
+
+
 DELETE /v1/food/1  -Delete a food item
 
 
@@ -117,7 +130,7 @@ DELETE /v1/food/1  -Delete a food item
 
 POST /v1/orders  - Create an order
 <br>
-{
+{       <br>
 	"food_id": 1,
 	<br>
 	"client_id": 2,
@@ -125,12 +138,14 @@ POST /v1/orders  - Create an order
 	"client_adress": "Kisumu"
 	<br>
 }
-<br>
+
+
 GET /v1/orders -Get all orders
-<br>
+
+
 PUT /v1/userorders/1  - Edit an order
 <br>
-{
+{       <br>
 	"food_id": 1,
 	<br>
 	"client_id": 1,
@@ -140,9 +155,11 @@ PUT /v1/userorders/1  - Edit an order
 	"status": "Accepted"
 	<br>
 }
-<br>
+
+
 DELETE /v1/orders/1  -Delete an order
-<br>
+
+
 GET /v1/orders/1  - Get an order by order id
 
 
