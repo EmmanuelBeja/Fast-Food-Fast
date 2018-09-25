@@ -38,20 +38,26 @@ A platform where people get to order food added by the admin. The admin can then
 POST /v1/signup - signup user
 <br>
 {
-	"username": "Beja",
-	"userphone": "0712991415",
-	"password": "pass1234",
+	"username": "Beja", 
+	<br>
+	"userphone": "0712991415", 
+	<br>
+	"password": "pass1234", 
+	<br>
 	"userRole": "client",
-	"confirmpass": "pass1234"
+	<br>
+	"confirmpass": "pass1234"<br>
 }
-<br>
+<br><br>
 GET /v1/auth/logout  - logout user
 <br>
 POST /v1/login  - login user
 <br>
 {
 	"username": "Beja",
+	<br>
 	"password": "pass1234"
+	<br>
 }
 <br>
 GET /v1/users/1  - Get user by id
@@ -64,22 +70,31 @@ UPDATE /v1/users/1  - Update user details
 <br>
 {
 	"username": "Chayu",
+	<br>
 	"userphone": "0712991416",
+	<br>
 	"password": "pass12345",
+	<br>
 	"userRole": "client",
+	<br>
 	"confirmpass": "pass12345"
+	<br>
 }
 <br>
+
 ### Food:
-<br>
-GET /v1/food  - Get ll food
+
+GET /v1/food  - Get all food items
 <br>
 POST /v1/food  - Create a food item
 <br>
 {
 	"food_name": "rice",
+	<br>
 	"food_price": 200,
+	<br>
 	"food_image": "img1.jpg"
+	<br>
 }
 <br>
 GET /v1/food/1  - Get a food item by food id
@@ -88,31 +103,42 @@ PUT /v1/food/1  - Edit food item details
 <br>
 {
 	"food_name": "tilapia",
+	<br>
 	"food_price": 350,
+	<br>
 	"food_image": "tilapia.jpg"
+	<br>
 }
 <br>
 DELETE /v1/food/1  -Delete a food item
-<br>
+
+
 ### Orders:
-<br>
+
 POST /v1/orders  - Create an order
 <br>
 {
 	"food_id": 1,
+	<br>
 	"client_id": 2,
+	<br>
 	"client_adress": "Kisumu"
+	<br>
 }
 <br>
-GET /v1/orders -Get all order
+GET /v1/orders -Get all orders
 <br>
 PUT /v1/userorders/1  - Edit an order
 <br>
 {
 	"food_id": 1,
+	<br>
 	"client_id": 1,
+	<br>
 	"client_adress": "Thika",
+	<br>
 	"status": "Accepted"
+	<br>
 }
 <br>
 DELETE /v1/orders/1  -Delete an order
