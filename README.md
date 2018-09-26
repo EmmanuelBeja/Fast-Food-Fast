@@ -1,14 +1,15 @@
 # Fast-Food-Fast
 
-
-A platform where people get to order food added by the admin. The admin can then accept decline or complete the orders made.
+  A platform where people get to order food added by the admin. The admin can then accept decline or complete the orders made.
 
   To interact with the app UI, click link
   [here](https://emmanuelbeja.github.io/Fast-Food-Fast/)<br>
 
-   To interact with the api endpoints, visit the link [here](https://emmanuelbeja-fast-food-fast.herokuapp.com/)<br>
+  To interact with the api endpoints, visit the link and add endpoints [here](https://emmanuelbeja-fast-food-fast.herokuapp.com/)<br>
 
-## Use the following endpoints to perform the specified tasks
+  API documentation [here](https://documenter.getpostman.com/view/5399899/RWaPv6zH)
+
+  ## Use the following endpoints to perform the specified tasks
 
   | 	Endpoint                       | Functionality                                  |                  
   | ---------------------------------| -----------------------------------------------|
@@ -17,6 +18,7 @@ A platform where people get to order food added by the admin. The admin can then
   | PUT /v1/orders/<int:order_id>    | Update a specific order                        |                         
   | GET /v1/orders/<int:order_id>    | Get a specific posted order                    |
   | DELETE /v1/orders/<int:order_id> | DELETE a specific posted order                 |
+  | GET /v1/userorders/<int:order_id>| DELETE a specific user's orders                |
   | POST /v1/food                    | Create food item                               |
   | GET /v1/food                     | Retrieve posted food                           |
   | PUT /v1/food/<int:food_id>       | Update a specific food                         |                         
@@ -30,184 +32,51 @@ A platform where people get to order food added by the admin. The admin can then
   | GET /v1/users                    | Get all signed up users                        |
   | GET /v1/auth/logout              | Logout a user                                  |
 
+  ## Application Features
 
-## API Usage
+  1. Create orders.
+  2. view, accept, decline and complete an order.
+  3. Create, edit and delete Food items.
+  4. Authentication.
+  <br>
 
-### Users:
+  **Users can do the following**
 
-POST /v1/signup - signup user
-<br>
-{
-        <br>
-	"username": "Beja", 
-	<br>
-	"userphone": "0712991415", 
-	<br>
-	"password": "pass1234", 
-	<br>
-	"userRole": "client",
-	<br>
-	"confirmpass": "pass1234"
-	<br>
-}
+  * Users can create an account and log in.
+  * Users can order food.
+  * Users can view history of their order.
 
+  **Admin can do the following**
+  * Admin can add, edit and delete food items.
+  * Admin can view, accept, decline and complete an order.
 
-GET /v1/auth/logout  - logout user
+  ## How to Test Manually
+  1. Clone the project to your local machine <br>
+  		` https://github.com/EmmanuelBeja/Fast-Food-Fast-API.git`
+  2. Create Virtual Environment <br>
+  		`virtualenv venv`
+  3. Activate Virtual ENvironment<br>
+  		`source venv/bin/activate`
+  4. Install Dependencies<br>
+  		`(venv)$ pip3 install -r requirements.txt` <br>
+  		`(venv)$ pip3 freeze > requirements.txt` <br>
+  5. Run the app <br>
+  		`python3 run.py`<br>
+  6. Run tests <br>
+  		`pytest`
+  		<br>
+  ## How to Contribute to this project?
 
+  1. Fork the project to your github account.
 
-POST /v1/login  - login user
-<br>
-{       <br>
-	"username": "Beja",
-	<br>
-	"password": "pass1234"
-	<br>
-}
+  2. Clone it to your local machine.
 
+  3. Create a feature branch from develop branch :
 
-GET /v1/users/1  - Get user by id
+  4. git checkout -b `ft-name-of-the-feature`
 
+  5. Update and Push the changes to github.
 
-GET /v1/users  - Get all users
+  6. git push origin `ft-name-of-the-feature`
 
-
-DELETE /v1/users/1  - Delete a user
-
-
-UPDATE /v1/users/1  - Update user details
-<br>
-{
-        <br>
-	"username": "Chayu",
-	<br>
-	"userphone": "0712991416",
-	<br>
-	"password": "pass12345",
-	<br>
-	"userRole": "client",
-	<br>
-	"confirmpass": "pass12345"
-	<br>
-}
-
-
-### Food:
-
-GET /v1/food  - Get all food items
-
-
-POST /v1/food  - Create a food item
-<br>
-{       <br>
-	"food_name": "rice",
-	<br>
-	"food_price": 200,
-	<br>
-	"food_image": "img1.jpg"
-	<br>
-}
-
-
-GET /v1/food/1  - Get a food item by food id
-
-
-PUT /v1/food/1  - Edit food item details
-<br>
-{       <br>
-	"food_name": "tilapia",
-	<br>
-	"food_price": 350,
-	<br>
-	"food_image": "tilapia.jpg"
-	<br>
-}
-
-
-DELETE /v1/food/1  -Delete a food item
-
-
-### Orders:
-
-POST /v1/orders  - Create an order
-<br>
-{       <br>
-	"food_id": 1,
-	<br>
-	"client_id": 2,
-	<br>
-	"client_adress": "Kisumu"
-	<br>
-}
-
-
-GET /v1/orders -Get all orders
-
-
-PUT /v1/userorders/1  - Edit an order
-<br>
-{       <br>
-	"food_id": 1,
-	<br>
-	"client_id": 1,
-	<br>
-	"client_adress": "Thika",
-	<br>
-	"status": "Accepted"
-	<br>
-}
-
-
-DELETE /v1/orders/1  -Delete an order
-
-
-GET /v1/orders/1  - Get an order by order id
-
-
-## Application Features
-
-1. Create orders
-2. view, accept, decline and complete an order.
-3. Create, edit and delete Food items
-
-<br>
-
-**Users can do the following**
-
-* Users can create an account and log in.
-* Users can order food.
-* Users can view history of their order.
-
-**Admin can do the following**
-* Admin can add, edit and delete food items.
-* Admin can view, accept, decline and complete an order.
-
-## How to Test Manually
-1. Clone the project to your local machine <br>
-		` https://github.com/EmmanuelBeja/Fast-Food-Fast-API.git`
-2. Create Virtual Environment <br>
-		`virtualenv venv`
-3. Activate Virtual ENvironment<br>
-		`source venv/bin/activate`
-4. Install Dependencies<br>
-		`(venv)$ pip3 install -r requirements.txt` <br>
-		`(venv)$ pip3 freeze > requirements.txt` <br>
-5. Run the app <br>
-		`python3 run.py`<br>
-6. Run tests <br>
-		`pytest`
-		<br>
-## How to Contribute to this project?
-
-1. Fork the project to your github account.
-
-2. Clone it to your local machine.
-
-3. Create a feature branch from develop branch :
-
-4. git checkout -b `ft-name-of-the-feature`
-
-5. Update and Push the changes to github.
-
-6. git push origin `ft-name-of-the-feature`
-
-7. Create Pull Request to my develop branch as base branch.
+  7. Create Pull Request to my develop branch as base branch.
