@@ -2,29 +2,31 @@
 import unittest
 import os
 import json
-from flask import url_for, abort, session
-from flask_testing import TestCase
+from flask import session
 from app import create_app
 
 
-class TestBase(TestCase):
-    """ Tests Base """
-
-    def create_app(self):
-        # pass in test configurations
-        app = create_app('testing')
-
-        return app
-
-
-class TestAuth(TestBase):
+class TestAuth(unittest.TestCase):
     """ Tests for the Auth """
     def setUp(self):
         # pass in test configurations
-        config_name = 'testing'
-        app = create_app(config_name)
+        app = create_app(config_name = 'testing')
         self.register_user = json.dumps(dict(
             username="user1",
+            userphone='0712991415',
+            password='Pass123',
+            userRole='client',
+            confirmpass='Pass123'))
+
+        self.register_user2 = json.dumps(dict(
+            username="usertwo",
+            userphone='0712991415',
+            password='Pass123',
+            userRole='client',
+            confirmpass='Pass123'))
+
+        self.register_user3 = json.dumps(dict(
+            username="userthree",
             userphone='0712991415',
             password='Pass123',
             userRole='client',
@@ -35,6 +37,14 @@ class TestAuth(TestBase):
             '/v1/signup',
             data=self.register_user,
             content_type='application/json')
+
+
+        self.client.post(
+            '/v1/signup',
+            data=self.register_user2,
+            content_type='application/json')
+
+
 
     def test_registration(self):
         """ Test for user registration """
@@ -76,7 +86,7 @@ class TestAuth(TestBase):
             content_type='application/json')
 
         data = json.loads(resource.data.decode())
-        self.assertEqual(resource.status_code, 201)
+        self.assertEqual(resource.status_code, 200)
         self.assertEqual(resource.content_type, 'application/json')
         self.assertEqual(
             data['message'].strip(),
@@ -90,7 +100,7 @@ class TestAuth(TestBase):
             content_type='application/json')
 
         data = json.loads(resource.data.decode())
-        self.assertEqual(resource.status_code, 200)
+        self.assertEqual(resource.status_code, 400)
         self.assertEqual(resource.content_type, 'application/json')
         self.assertEqual(data['message'].strip(), 'user does not exist')
 
@@ -113,12 +123,12 @@ class TestAuth(TestBase):
 
     def test_get_specific_user(self):
         """ Test get specific user by id """
-        resource = self.client.get('/v1/users/1')
+        resource = self.client.get('/v1/users/2')
         self.assertEqual(resource.status_code, 200)
 
-    def test_edit_user(self):
+    def test_edit_user_not_found(self):
         resource = self.client.put(
-                '/v1/users/1',
+                '/v1/users/4',
                 data=json.dumps(dict(
                     username="user1 edit",
                     userphone='0712991415',

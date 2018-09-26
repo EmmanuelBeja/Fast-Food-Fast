@@ -94,8 +94,8 @@ def user_id(id):
 @users_api.route('/auth/logout')
 def logout():
     """ Method to logout user."""
-    print(session['username'])
-    print(session['userid'])
-    session.clear()
-
-    return jsonify({"message": "Succeffully logout."})
+    if 'username' in session:
+        session.clear()
+        return jsonify({"message": "Succeffully logout."})
+    return jsonify({
+        "message": "Not logged in."}), 200

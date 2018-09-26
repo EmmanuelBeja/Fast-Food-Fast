@@ -1,12 +1,12 @@
 # Fast-Food-Fast
-[![Build Status](https://travis-ci.org/EmmanuelBeja/Fast-Food-Fast.svg?branch=API)](https://travis-ci.org/EmmanuelBeja/Fast-Food-Fast)[![Coverage Status](https://coveralls.io/repos/github/EmmanuelBeja/Fast-Food-Fast/badge.svg?branchAPI2)](https://coveralls.io/github/EmmanuelBeja/Fast-Food-Fast?branch=API)[![Codacy Badge](https://api.codacy.com/project/badge/Grade/cc1707c8448648e88e8c92e949855e08)](https://www.codacy.com/app/EmmanuelBeja/Fast-Food-Fast?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=EmmanuelBeja/Fast-Food-Fast&amp;utm_campaign=Badge_Grade)[![Maintainability](https://api.codeclimate.com/v1/badges/66f80833d2476f3d6950/maintainability)](https://codeclimate.com/github/EmmanuelBeja/Fast-Food-Fast/maintainability)
+[![Build Status](https://travis-ci.org/EmmanuelBeja/Fast-Food-Fast.svg?branch=ch-refactor-API-160752808)](https://travis-ci.org/EmmanuelBeja/Fast-Food-Fast)[![Coverage Status](https://coveralls.io/repos/github/EmmanuelBeja/Fast-Food-Fast/badge.svg?branch=ch-refactor-API-160752808)](https://coveralls.io/github/EmmanuelBeja/Fast-Food-Fast?branch=ch-refactor-API-160752808)[![Codacy Badge](https://api.codacy.com/project/badge/Grade/cc1707c8448648e88e8c92e949855e08)](https://www.codacy.com/app/EmmanuelBeja/Fast-Food-Fast?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=EmmanuelBeja/Fast-Food-Fast&amp;utm_campaign=Badge_Grade)[![Maintainability](https://api.codeclimate.com/v1/badges/66f80833d2476f3d6950/maintainability)](https://codeclimate.com/github/EmmanuelBeja/Fast-Food-Fast/maintainability)
 
   A platform where people get to order food added by the admin. The admin can then accept decline or complete the orders made.
 
   To interact with the app UI, click link
   [here](https://emmanuelbeja.github.io/Fast-Food-Fast/)<br>
 
-  To interact with the api endpoints, visit the link [here](https://emmanuelbeja-fast-food-fast.herokuapp.com/v1/orders)<br>
+  To interact with the api endpoints, visit the link and add endpoints [here](https://emmanuelbeja-fast-food-fast.herokuapp.com/)<br>
 
   API documentation [here](https://documenter.getpostman.com/view/5399899/RWaPv6zH)
 
@@ -19,6 +19,7 @@
   | PUT /v1/orders/<int:order_id>    | Update a specific order                        |                         
   | GET /v1/orders/<int:order_id>    | Get a specific posted order                    |
   | DELETE /v1/orders/<int:order_id> | DELETE a specific posted order                 |
+  | GET /v1/userorders/<int:order_id>| DELETE a specific user's orders                |
   | POST /v1/food                    | Create food item                               |
   | GET /v1/food                     | Retrieve posted food                           |
   | PUT /v1/food/<int:food_id>       | Update a specific food                         |                         
@@ -34,10 +35,10 @@
 
   ## Application Features
 
-  1. Create orders
+  1. Create orders.
   2. view, accept, decline and complete an order.
-  3. Create, edit and delete Food items
-
+  3. Create, edit and delete Food items.
+  4. Authentication.
   <br>
 
   **Users can do the following**
