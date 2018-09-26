@@ -2,40 +2,42 @@
 import unittest
 import os
 import json
-from flask import url_for, abort, session
-from flask_testing import TestCase
+from flask import session
 from app import create_app
 
 
-class TestBase(TestCase):
-    """ Tests Base """
-
-    def create_app(self):
-        # pass in test configurations
-        config_name = os.getenv('FLASK_CONFIG', 'testing')
-        app = create_app(config_name)
-
-        return app
-
-class TestOrders(TestBase):
+class TestOrders(unittest.TestCase):
     """ Tests for the Orders """
     def setUp(self):
         # pass in test configurations
-        config_name = os.getenv('FLASK_CONFIG', 'testing')
-        app = create_app(config_name)
+        app = create_app(config_name = 'testing')
         self.client = app.test_client()
 
-        self.client.post(
-            '/v1/login',
-            data=json.dumps(dict(username="user1", password='Pass123')),
-            content_type='application/json')
+        self.register_user = json.dumps(dict(
+            username="useer",
+            userphone='0712991415',
+            password='Pass123',
+            userRole='client',
+            confirmpass='Pass123'))
+
+        self.login = data=json.dumps(dict(username="useer", password='Pass123'))
 
         self.create_order = json.dumps(dict(
                 food_id=1,
                 client_id=1,
                 client_adress='Likoni',
                 status='pending'))
-        self.client = app.test_client()
+
+        self.signupuser = self.client.post(
+           '/v1/signup',
+           data=self.register_user,
+           content_type='application/json')
+
+        self.client.post(
+           '/v1/login',
+           data=self.login,
+           content_type='application/json')
+
         self.client.post(
             '/v1/orders',
             data=self.create_order,
