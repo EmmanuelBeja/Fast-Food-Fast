@@ -12,26 +12,26 @@
 
   ## Use the following endpoints to perform the specified tasks
 
-  | 	Endpoint                       | Functionality                                  |                  
-  | ---------------------------------| -----------------------------------------------|
-  | POST /v1/orders                  | Create an order                                |
-  | GET /v1/orders                   | Retrieve posted orders                         |
-  | PUT /v1/orders/<int:order_id>    | Update a specific order                        |                         
-  | GET /v1/orders/<int:order_id>    | Get a specific posted order                    |
-  | DELETE /v1/orders/<int:order_id> | DELETE a specific posted order                 |
-  | GET /v1/userorders/<int:order_id>| DELETE a specific user's orders                |
-  | POST /v1/food                    | Create food item                               |
-  | GET /v1/food                     | Retrieve posted food                           |
-  | PUT /v1/food/<int:food_id>       | Update a specific food                         |                         
-  | GET /v1/food/<int:food_id>       | Get a specific posted food                     |
-  | DELETE /v1/food/<int:food_id>    | DELETE a specific posted food                  |
-  | POST /v1/signup                  | Sign up User                                   |
-  | POST /v1/login                   | Login User                                     |
-  | PUT /v1/users/<int:id>           | Update a specific user                         |                         
-  | GET /v1/users/<int:id>           | Get a specific signed up user                  |
-  | DELETE /v1/users/<int:id>        | DELETE a specific signed up user               |
-  | GET /v1/users                    | Get all signed up users                        |
-  | GET /v1/auth/logout              | Logout a user                                  |
+  | 	Endpoint                         | Functionality                                  |                  
+  | ---------------------------------- | -----------------------------------------------|
+  | POST /v1/users/orders              | Create an order                                |
+  | GET /v1/orders/                    | Retrieve posted orders                         |
+  | PUT /v1/orders/<int:order_id>      | Update a specific order                        |                         
+  | GET /v1/orders/<int:order_id>      | Get a specific posted order                    |
+  | DELETE /v1/orders/<int:order_id>   | DELETE a specific posted order                 |
+  | GET /v1/users/orders/<int:order_id>| GET a specific user's orders                   |
+  | POST /v1/menu                      | Create food item                               |
+  | GET /v1/menu                       | Retrieve posted food                           |
+  | PUT /v1/food/<int:food_id>         | Update a specific food                         |                         
+  | GET /v1/food/<int:food_id>         | Get a specific posted food                     |
+  | DELETE /v1/food/<int:food_id>      | DELETE a specific posted food                  |
+  | POST /v1/auth/signup               | Sign up User                                   |
+  | POST /v1/auth/login                | Login User                                     |
+  | PUT /v1/users/<int:id>             | Update a specific user                         |                         
+  | GET /v1/users/<int:id>             | Get a specific signed up user                  |
+  | DELETE /v1/users/<int:id>          | DELETE a specific signed up user               |
+  | GET /v1/users                      | Get all signed up users                        |
+  | GET /v1/auth/logout                | Logout a user                                  |
 
   ## Application Features
 
