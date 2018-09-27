@@ -113,9 +113,6 @@ class User(object):
             password,
             userRole):
         """ update User """
-        #cur.execute("UPDATE tbl_users SET username='chayu' WHERE userid=4")
-        #conn.commit()
-
 
         userlistclone = {}
         if len(self.user_list) > 0:
@@ -198,31 +195,37 @@ class Order(object):
     def get_orders(self):
         """ get all Orders """
         if self.is_loggedin() is True:
-            if len(self.order_list) > 0:
+            if self.is_admin() is True:
+                if len(self.order_list) > 0:
+                    return jsonify({
+                    "message": "Successful.",
+                    "Order": self.order_list}), 200
                 return jsonify({
-                "message": "Successful.",
-                "Order": self.order_list}), 200
+                    "message": "No order."}), 400
             return jsonify({
-                "message": "No order."}), 400
+                "message": "You dont have admin priviledges."}), 401
         return jsonify({
             "message": "Please login first."}), 401
 
     def delete_order(self, order_id):
         """ delete Order """
         if self.is_loggedin() is True:
-            if len(self.order_list) > 0:
-                for order in self.order_list:
-                    if order['order_id'] == order_id:
-                        self.order_list.remove(order)
+            if self.is_admin() is True:
+                if len(self.order_list) > 0:
+                    for order in self.order_list:
+                        if order['order_id'] == order_id:
+                            self.order_list.remove(order)
+                            return jsonify({
+                                "message": "Delete Successful.",
+                                "Orders": self.order_list}), 201
+                        self.notfound = True
+                    if self.notfound is True:
                         return jsonify({
-                            "message": "Delete Successful.",
-                            "Orders": self.order_list}), 201
-                    self.notfound = True
-                if self.notfound is True:
-                    return jsonify({
-                        "message": "No order with that id."}), 400
+                            "message": "No order with that id."}), 400
+                return jsonify({
+                    "message": "No order."}), 400
             return jsonify({
-                "message": "No order."}), 400
+                "message": "You dont have admin priviledges."}), 401
         return jsonify({
             "message": "Please login first."}), 401
 
@@ -235,41 +238,47 @@ class Order(object):
             status):
         """ update Order """
         if self.is_loggedin() is True:
-            if len(self.order_list) > 0:
-                for order in self.order_list:
-                    if order['order_id'] == order_id:
-                        order['food_id'] = food_id
-                        order['client_id'] = client_id
-                        order['client_adress'] = client_adress
-                        order['status'] = status
+            if self.is_admin() is True:
+                if len(self.order_list) > 0:
+                    for order in self.order_list:
+                        if order['order_id'] == order_id:
+                            order['food_id'] = food_id
+                            order['client_id'] = client_id
+                            order['client_adress'] = client_adress
+                            order['status'] = status
+                            return jsonify({
+                                "message": "Update Successful.",
+                                "Orders": self.order_list}), 201
+                        self.notfound = True
+                    if self.notfound is True:
                         return jsonify({
-                            "message": "Update Successful.",
-                            "Orders": self.order_list}), 201
-                    self.notfound = True
-                if self.notfound is True:
-                    return jsonify({
-                        "message": "No order with that id."}), 400
+                            "message": "No order with that id."}), 400
+                return jsonify({
+                    "message": "No order."}), 400
             return jsonify({
-                "message": "No order."}), 400
+                "message": "You dont have admin priviledges."}), 401
         return jsonify({
             "message": "Please login first."}), 401
 
     def get_order(self, order_id):
         """ get Order """
         if self.is_loggedin() is True:
-            if len(self.order_list) > 0:
-                for order in self.order_list:
-                    if order['order_id'] == order_id:
-                        return jsonify({
-                            "message": "Successful.",
-                            "Order": order}), 200
-                    self.notfound = True
+            if self.is_admin() is True:
+                if len(self.order_list) > 0:
+                    for order in self.order_list:
+                        if order['order_id'] == order_id:
+                            return jsonify({
+                                "message": "Successful.",
+                                "Order": order}), 200
+                        self.notfound = True
 
-                if self.notfound is True:
-                    return jsonify({
-                        "message": "No order with that id."}), 400
+                    if self.notfound is True:
+                        return jsonify({
+                            "message": "No order with that id."}), 400
+                return jsonify({
+                    "message": "No order."}), 400
             return jsonify({
-                "message": "No order."}), 400
+                "message": "You dont have admin priviledges."}), 401
         return jsonify({
             "message": "Please login first."}), 401
 
@@ -283,7 +292,6 @@ class Order(object):
                         # add content in a list and display
                         result.append(order)
                     self.notfound = True
-
                 return jsonify({"message": "Successful", "Order": result})
             return jsonify({
                 "message": "No order."}), 400
@@ -293,6 +301,12 @@ class Order(object):
     def is_loggedin(self):
         if 'username' in session:
             if session['username']:
+                return True
+        return False
+
+    def is_admin(self):
+        if 'userrole' in session:
+            if session['userrole'] == 'admin':
                 return True
         return False
 

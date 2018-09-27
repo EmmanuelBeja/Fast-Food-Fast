@@ -18,7 +18,7 @@ class TestOrders(unittest.TestCase):
             username="useer",
             userphone='0712991415',
             password='Pass123',
-            userRole='client',
+            userRole='admin',
             confirmpass='Pass123'))
 
         self.login = data=json.dumps(dict(username="useer", password='Pass123'))
