@@ -7,16 +7,36 @@ from app.models import Food
 foodObject = Food()
 
 
-@food_api.route('/food', methods=["GET", "POST"])
+def validate_data(data):
+    """validate user details"""
+    try:
+        # check if food_name is empty
+        if data["food_name"] is False:
+            return "food_name required"
+            # check if food_price is empty
+        elif data["food_price"] is False:
+            return "food_price required"
+            # check if food_image is empty
+        elif data["food_image"] is False:
+            return "food_image required"
+        else:
+            return "valid"
+    except Exception as error:
+        return "please provide all the fields, missing " + str(error)
+
+@food_api.route('/menu', methods=["GET", "POST"])
 def food():
     """ Method to create and retrieve food."""
     if request.method == "POST":
         data = request.get_json()
-        food_name = data['food_name']
-        food_price = data['food_price']
-        food_image = data['food_image']
-        res = foodObject.create_food(food_name, food_price, food_image)
-        return res
+        res = validate_data(data)
+        if res == "valid":
+            food_name = data['food_name']
+            food_price = data['food_price']
+            food_image = data['food_image']
+            res = foodObject.create_food(food_name, food_price, food_image)
+            return res
+        return jsonify({"message": res}), 400
     data = foodObject.get_foods()
     return data
 

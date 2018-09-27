@@ -10,7 +10,8 @@ class TestOrders(unittest.TestCase):
     """ Tests for the Orders """
     def setUp(self):
         # pass in test configurations
-        app = create_app(config_name = 'testing')
+        config_name = os.getenv('APP_SETTINGS')
+        app = create_app(config_name)
         self.client = app.test_client()
 
         self.register_user = json.dumps(dict(
@@ -29,17 +30,17 @@ class TestOrders(unittest.TestCase):
                 status='pending'))
 
         self.signupuser = self.client.post(
-           '/v1/signup',
+           '/v1/auth/signup',
            data=self.register_user,
            content_type='application/json')
 
         self.client.post(
-           '/v1/login',
+           '/v1/auth/login',
            data=self.login,
            content_type='application/json')
 
         self.client.post(
-            '/v1/orders',
+            '/v1/users/orders',
             data=self.create_order,
             content_type='application/json')
 
@@ -48,7 +49,7 @@ class TestOrders(unittest.TestCase):
         """ Test for order creation """
 
         resource = self.client.post(
-                '/v1/orders',
+                '/v1/users/orders',
                 data=self.create_order,
                 content_type='application/json')
 
@@ -60,7 +61,7 @@ class TestOrders(unittest.TestCase):
     def test_get_all_orders(self):
         """ Test for getting all orders """
         resource = self.client.get(
-            '/v1/orders',
+            '/v1/orders/',
             data=json.dumps(dict()),
             content_type='application/json')
 

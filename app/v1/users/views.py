@@ -6,15 +6,36 @@ from app.models import User
 userObject = User()
 
 
-def validate_data(data):
+def validate_data_signup(data):
     """validate user details"""
     try:
         # check if the username is more than 3 characters
         if len(data['username'].strip()) < 3:
             return "username must be more than 3 characters"
-        # check if password has spacese
+        # check if password has spaces
         elif " " in data["password"]:
             return "password should be one word, no spaces"
+        # check if password is empty
+        elif data["password"] == "":
+            return "password required"
+        # check if username has spaces
+        elif " " in data["username"]:
+            return "username should be one word, no spaces"
+        # check if username is empty
+        elif data["username"] == "":
+            return "username required"
+        # check if userphone has spaces
+        elif " " in data["userphone"]:
+            return "userphone should be one word, no spaces"
+        # check if userphone empty
+        elif data["userphone"] == "":
+            return "userphone required"
+        # check if userRole has spaces
+        elif " " in data["userRole"]:
+            return "userRole should be one word, no spaces"
+        # check if userRole is empty
+        elif data["userRole"] == "":
+            return "userRole required"
         elif len(data['password'].strip()) < 5:
             return "Password should have atleast 5 characters"
         # check if the passwords match
@@ -25,35 +46,61 @@ def validate_data(data):
     except Exception as error:
         return "please provide all the fields, missing " + str(error)
 
+def validate_data_login(data):
+    """validate user details"""
+    try:
+        # check if the username is more than 3 characters
+        if len(data['username'].strip()) < 3:
+            return "username must be more than 3 characters"
+        # check if password has spaces
+        elif " " in data["password"]:
+            return "password should be one word, no spaces"
+        # check if password is empty
+        elif data["password"] == "":
+            return "password required"
+        # check if username has spaces
+        elif " " in data["username"]:
+            return "username should be one word, no spaces"
+        # check if username is empty
+        elif data["username"] == "":
+            return "username required"
+        else:
+            return "valid"
+    except Exception as error:
+        return "please provide all the fields, missing " + str(error)
 
-@users_api.route('/signup', methods=["POST"])
+
+@users_api.route('/auth/signup', methods=["POST"])
 def reg():
     """ Method to create user account."""
-    if request.method == "POST":
-        data = request.get_json()
-        res = validate_data(data)
+    data = request.get_json()
+    res = validate_data_signup(data)
+
+    if res == "valid":
         username = data['username']
         userphone = data['userphone']
         password = data['password']
         userRole = data['userRole']
-        if res == "valid":
-            response = userObject.create_user(
-                username,
-                userphone,
-                password,
-                userRole)
-            return response
-        return jsonify({"message": res}), 400
+        response = userObject.create_user(
+            username,
+            userphone,
+            password,
+            userRole)
+        return response
+    return jsonify({"message": res}), 400
 
 
-@users_api.route('/login', methods=["POST"])
+@users_api.route('/auth/login', methods=["POST"])
 def login():
     """ Method to login user """
     data = request.get_json()
-    username = data['username']
-    password = data['password']
-    res = userObject.login(username, password)
-    return res
+    res = validate_data_login(data)
+    if res == "valid":
+        username = data['username']
+        password = data['password']
+        res = userObject.login(username, password)
+        return res
+    return jsonify({"message": res}), 401
 
 
 @users_api.route('/users', methods=["GET"])
@@ -71,12 +118,13 @@ def user_id(id):
     elif request.method == "PUT":
         """ Method to edit a specific user."""
         data = request.get_json()
-        res = validate_data(data)
-        username = data['username']
-        userphone = data['userphone']
-        password = data['password']
-        userRole = data['userRole']
+        res = validate_data_signup(data)
+
         if res == "valid":
+            username = data['username']
+            userphone = data['userphone']
+            password = data['password']
+            userRole = data['userRole']
             response = userObject.update_user(
                 id,
                 username,

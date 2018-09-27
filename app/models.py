@@ -13,6 +13,7 @@ class User(object):
         """Create users"""
         self.users = {}
         if not self.valid_username(username):
+
             self.id = len(self.user_list)
             self.users['username'] = username
             self.users['userphone'] = userphone
@@ -112,6 +113,10 @@ class User(object):
             password,
             userRole):
         """ update User """
+        #cur.execute("UPDATE tbl_users SET username='chayu' WHERE userid=4")
+        #conn.commit()
+
+
         userlistclone = {}
         if len(self.user_list) > 0:
             for user in self.user_list:

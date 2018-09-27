@@ -10,7 +10,8 @@ class TestFood(unittest.TestCase):
     """ Tests for the Orders """
     def setUp(self):
         # pass in test configurations
-        app = create_app(config_name="testing")
+        config_name = os.getenv('APP_SETTINGS')
+        app = create_app(config_name)
         self.create_food = json.dumps(dict(
                 food_name="mchele",
                 food_price=200,
@@ -33,29 +34,29 @@ class TestFood(unittest.TestCase):
         self.client = app.test_client()
 
         self.signupuser = self.client.post(
-           '/v1/signup',
+           '/v1/auth/signup',
            data=self.register_user,
            content_type='application/json')
 
         self.client.post(
-           '/v1/login',
+           '/v1/auth/login',
            data=self.login,
            content_type='application/json')
 
         self.client.post(
-            '/v1/food',
+            '/v1/menu',
             data=self.create_food,
             content_type='application/json')
 
         self.client.post(
-            '/v1/food',
+            '/v1/menu',
             data=self.create_food2,
             content_type='application/json')
 
     def test_food_creation(self):
         """ Test for food creation """
         resource = self.client.post(
-                '/v1/food',
+                '/v1/menu',
                 data=self.create_food,
                 content_type='application/json')
 
@@ -67,7 +68,7 @@ class TestFood(unittest.TestCase):
     def test_get_all_foods(self):
         """ Test for getting all foods """
         resource = self.client.get(
-            '/v1/food',
+            '/v1/menu',
             data=json.dumps(dict()),
             content_type='application/json')
 

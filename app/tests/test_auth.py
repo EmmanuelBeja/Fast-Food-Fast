@@ -10,7 +10,8 @@ class TestAuth(unittest.TestCase):
     """ Tests for the Auth """
     def setUp(self):
         # pass in test configurations
-        app = create_app(config_name = 'testing')
+        config_name = os.getenv('APP_SETTINGS')
+        app = create_app(config_name)
         self.register_user = json.dumps(dict(
             username="user1",
             userphone='0712991415',
@@ -34,13 +35,13 @@ class TestAuth(unittest.TestCase):
 
         self.client = app.test_client()
         self.client.post(
-            '/v1/signup',
+            '/v1/auth/signup',
             data=self.register_user,
             content_type='application/json')
 
 
         self.client.post(
-            '/v1/signup',
+            '/v1/auth/signup',
             data=self.register_user2,
             content_type='application/json')
 
@@ -49,7 +50,7 @@ class TestAuth(unittest.TestCase):
     def test_registration(self):
         """ Test for user registration """
         resource = self.client.post(
-            '/v1/signup',
+            '/v1/auth/signup',
             data=json.dumps(dict(
                 username="user2",
                 userphone='0712991415',
@@ -65,7 +66,7 @@ class TestAuth(unittest.TestCase):
     def test_username_exist(self):
         """ Test if username exists """
         resource = self.client.post(
-            '/v1/signup',
+            '/v1/auth/signup',
             data=json.dumps(dict(
                 username="user1",
                 userphone='0712991415',
@@ -81,7 +82,7 @@ class TestAuth(unittest.TestCase):
     def test_login(self):
         """ Test login """
         resource = self.client.post(
-            '/v1/login',
+            '/v1/auth/login',
             data=json.dumps(dict(username="user1", password='Pass123')),
             content_type='application/json')
 
@@ -95,7 +96,7 @@ class TestAuth(unittest.TestCase):
     def test_wrong_login_username(self):
         """ Test login validation """
         resource = self.client.post(
-            '/v1/login',
+            '/v1/auth/login',
             data=json.dumps(dict(username="user5", password='Pass123')),
             content_type='application/json')
 
@@ -107,14 +108,13 @@ class TestAuth(unittest.TestCase):
     def test_wrong_login_details(self):
         """ Test login validation """
         resource = self.client.post(
-                '/v1/login',
+                '/v1/auth/login',
                 data=json.dumps(dict(username="user1", password='')),
                 content_type='application/json')
 
         data = json.loads(resource.data.decode())
         self.assertEqual(resource.status_code, 401)
         self.assertEqual(resource.content_type, 'application/json')
-        self.assertEqual(data['message'].strip(), 'Wrong username or password')
 
     def test_get_users(self):
         """ Test get users """
