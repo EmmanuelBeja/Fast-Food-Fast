@@ -10,7 +10,7 @@ class TestFood(unittest.TestCase):
     """ Tests for the Orders """
     def setUp(self):
         # pass in test configurations
-        config_name = os.getenv('APP_SETTINGS')
+        config_name = os.getenv('APP_SETTINGS', 'testing')
         app = create_app(config_name)
         self.create_food = json.dumps(dict(
                 food_name="mchele",

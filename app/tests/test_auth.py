@@ -10,7 +10,7 @@ class TestAuth(unittest.TestCase):
     """ Tests for the Auth """
     def setUp(self):
         # pass in test configurations
-        config_name = os.getenv('APP_SETTINGS')
+        config_name = os.getenv('APP_SETTINGS', 'testing')
         app = create_app(config_name)
         self.register_user = json.dumps(dict(
             username="user1",
