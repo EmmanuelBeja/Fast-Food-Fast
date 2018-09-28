@@ -33,6 +33,18 @@ img{
   display: block;
 }
 
+.accepted{
+  color: green!important;
+}
+
+.declined{
+  color: red!important;
+}
+
+.completed{
+  color: blue!important;
+}
+
 .modal {
 display: block;
 width: 600px;
