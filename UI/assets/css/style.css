@@ -28,6 +28,11 @@ img{
   text-align:center;
 }
 
+.word-right{
+  text-align: right;
+  display: block;
+}
+
 .modal {
 display: block;
 width: 600px;
